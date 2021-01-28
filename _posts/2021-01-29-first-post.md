@@ -1,7 +1,10 @@
 ---
-title: "Test Post"
-date: 2021-01-29 00:00:00 -0400
-categories: Recommendation System
+layout: post
+title: "멤버 소개"
+author: yeojimi
+fullview: true
 ---
 
-Recommendation System
+- 오승미
+- 조경민
+- 정여진
