@@ -13,12 +13,13 @@
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
 remote_theme : mmistakes/minimal-mistakes
 
 # Site Settings
 locale                   : "en-US"
 title                    : "Hello Google"
-title_separator          : " "
+title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Seungmi Oh, Kyungmin Choi, Yeojin Jung"
 description              : "master's course at Department of Statistics & Data Science, Yonsei University"
