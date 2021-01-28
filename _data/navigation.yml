@@ -1,11 +1,11 @@
 # main links
 main:
   - title: "home"
-    url: https://https://gogl3.github.io/
+    url: https://gogl3.github.io/
   - title: "about"
-    url: https://https://gogl3.github.io/about
+    url: https://gogl3.github.io/about/
   - title: "projects"
-    url: https://gogl3.github.io/projects
+    url: https://gogl3.github.io/projects/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
