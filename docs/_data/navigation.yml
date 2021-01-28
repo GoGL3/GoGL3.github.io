@@ -3,9 +3,9 @@ main:
   - title: "home"
     url: https://gogl3.github.io/
   - title: "about"
-    url: https://gogl3.github.io/about/
+    url: /about/
   - title: "projects"
-    url: https://gogl3.github.io/projects/
+    url: /projects/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
