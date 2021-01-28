@@ -1,11 +1,9 @@
 # main links
 main:
-  - title: "Home"
+  - title: "Prjects"
     url: /
   - title: "About"
     url: /about/
-  - title: "Projects"
-    url: /projects/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
