@@ -3,7 +3,7 @@
 Seungmi Oh:
   name        : "Seungmi Oh"
   bio         : ""
-  avatar      : # "/assets/images/bio-photo-1.jpg"
+  avatar      : # "/assets/profile1.jpg"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -12,7 +12,7 @@ Seungmi Oh:
 Kyungmin Cho:
   name        : "Kyungmin Cho"
   bio         : ""
-  avatar      : # "/assets/images/bio-photo-2.jpg"
+  avatar      : # "/assets/profile2.jpg"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -21,7 +21,7 @@ Kyungmin Cho:
 정여진:
   name        : "정여진"
   bio         : "암튼 ENFJ임"
-  avatar      : # "/assets/images/bio-photo-3.jpg"
+  avatar      : # "/assets/profile3.jpg"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
