@@ -21,7 +21,7 @@ locale                   : "en-US"
 title                    : "Hello Google"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Seungmi Oh, Kyungmin Choi, Yeojin Jung"
+name                     : "Seungmi Oh, Kyungmin Cho, Yeojin Jung"
 description              : "master's course at Department of Statistics & Data Science, Yonsei University"
 url                      : "https://GoGL3.github.io"
 baseurl                  : ""
