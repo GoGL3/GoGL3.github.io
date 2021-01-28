@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "Home"
-    url: https://gogl3.github.io/
+    url: /
   - title: "About"
     url: /about/
   - title: "Projects"
