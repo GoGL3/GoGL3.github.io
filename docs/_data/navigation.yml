@@ -1,10 +1,10 @@
 # main links
 main:
-  - title: "home"
+  - title: "Home"
     url: https://gogl3.github.io/
-  - title: "about"
+  - title: "About"
     url: /about/
-  - title: "projects"
+  - title: "Projects"
     url: /projects/
   # - title: "Sample Collections"
   #   url: /collection-archive/
