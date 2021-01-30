@@ -1,18 +1,18 @@
 # /_data/authors.yml
 
-Seungmi Oh:
-  name        : "Seungmi Oh"
+오승미:
+  name        : "오승미"
   bio         : ""
-  avatar      : # "/assets/profile1.jpg"
+  avatar      : "/assets/profile1.jpeg"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "seungmi530@gmail.com"
 
-Kyungmin Cho:
-  name        : "Kyungmin Cho"
+조경민:
+  name        : "조경민"
   bio         : ""
-  avatar      : # "/assets/profile2.jpg"
+  avatar      : "/assets/profile2.jpeg"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
