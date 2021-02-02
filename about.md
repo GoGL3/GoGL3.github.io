@@ -19,7 +19,7 @@ description: 테크 블로그를 만드는 토스랩 식구들을 소개합니�
 	<p>등을 성실히 기록하고 함께 공유하려 합니다.</p>
 	<p>더불어 기술 블로그 또한 <a href="https://github.com/tosslab/tosslab.github.io" target="_blank">Github Page</a>로 운영되는 만큼 오픈소스로 공개되어 있으니 혹여 내용 중 잘못된 부분이 있다면 따끔하게 짚어주시고, 함께 논의해보면 좋을 만한 이슈 또한 서슴지 말고 댓글 · <a href="mailto:product@tosslab.com">메일</a> · <a href="https://help.github.com/articles/using-pull-requests/" target="_blank">Pull Request</a>를 통해 알려주세요.</p>
 	<h1>팀원들 소개</h1>
-	{% for authors in site.data.authors %}
+	<!-- {% for authors in site.data.authors %}
 	{% assign author = authors[1] %}
 	{% if author.isexist == 0%}
 	{% else %}
@@ -37,5 +37,5 @@ description: 테크 블로그를 만드는 토스랩 식구들을 소개합니�
 		</p>
 	</div>
 	{% endif %}
-	{% endfor %}
+	{% endfor %} -->
 </section>
