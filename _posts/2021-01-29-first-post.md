@@ -15,7 +15,7 @@ Our first project is **Recommendation System**. [Brunch](https://brunch.co.kr/) 
 
 - 오승미 (Seungmi, Oh)
 - 조경민 (Kyungmin, Cho)
-- 정여진 (Yeojin, Jung) :kissing_closed_eyes:
+- 정여진 (Yeojin, Jung) :collisions:
     - email : yjjung1089@yonsei.ac.kr
     - reserach areas: spatial GLMM, functional data analysis. spatio-temporal autologistic
 
