@@ -14,7 +14,9 @@ Our first project is **Recommendation System**. [Brunch](https://brunch.co.kr/) 
 ### Members
 
 - 오승미 (Seungmi, Oh)
-- 조경민 (Kyungmin, Cho)
+- 조경민 (Kyungmin, Cho) :turtle:
+    - email : ckm4514@yonsei.ac.kr
+    - research areas: variational inference, bayesian neural network
 - 정여진 (Yeojin, Jung) :collision:
     - email : yjjung1089@yonsei.ac.kr
     - reserach areas: spatial GLMM, functional data analysis. spatio-temporal autologistic
