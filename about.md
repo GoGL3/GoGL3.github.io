@@ -1,5 +1,4 @@
 ---
-layout: page
 category: teams
 permalink: /about/
 title: Teams
