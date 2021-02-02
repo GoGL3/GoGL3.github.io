@@ -1,5 +1,5 @@
 ---
-<!-- layout: page -->
+layout: page
 permalink: /about/
 title: Teams
 description: 테크 블로그를 만드는 토스랩 식구들을 소개합니다.
