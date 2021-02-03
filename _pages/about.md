@@ -1,15 +1,28 @@
 ---
-title: "이 블로그 설명서"
+title: "Welcome to GoGL's blog :)"
 permalink: /about/
-toc_sticky: true
-toc_ads : true
+<!-- toc_sticky: true -->
+<!-- toc_ads : true -->
 layout: single
 ---
 
-## devinlife.github.io 블로그
 
-이 블로그는 Github Pages 블로그 서비스인 github.io를 같이 만들어보는 샘플 블로그이다.
+Hi, welcome to our teamblog! :laughing:
 
-진짜 블로그인 <https://devinlife.com>을 방문해보자.
-이 곳에서 이 샘플 블로그를 같이 만들어보는 Github Pages 블로그 따라하기 시리즈의
-모든 글을 볼 수 있다.
+GoGL is a team of three graduate students at the Department of Statistics & Data Science, Yonsei Univerrsity. Our main reserach areas include variational inference(VI), bayesian computing, spatio-temporal data analysis, functional data analysis, and more...bayesian stuff. However, we also enjoy exploring new ideas in the big statistics, data science, and artificial intelligence world. We created this blog to keep track of our studies and projects. Our goal is to tackle any interesting topics in the field of data science & AI.
+
+Our first project is the **Recommendation System**. [Brunch](https://brunch.co.kr/) dataset from [KaKao Arena](https://arena.kakao.com/c/6) will be used. We plan to finish this project by March. 
+
+
+### Members
+
+- 오승미 (Seungmi, Oh)
+	- email : smoh@yonsei.ac.kr
+    - research areas: spatio-temporal analysis, infectious disease modeling
+- 조경민 (Kyungmin, Cho) :turtle:
+    - email : ckm4514@yonsei.ac.kr
+    - research areas: variational inference, bayesian neural network
+- 정여진 (Yeojin, Jung) :collision:
+    - email : yjjung1089@yonsei.ac.kr
+    - reserach areas: spatial GLMM, functional data analysis. spatio-temporal autologistic
+
