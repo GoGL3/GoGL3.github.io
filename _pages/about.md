@@ -17,12 +17,12 @@ Our first project is the **Recommendation System**. [Brunch](https://brunch.co.k
 ### Members
 
 - 오승미 (Seungmi, Oh)
-	- email : smoh@yonsei.ac.kr
+	- email : <smoh@yonsei.ac.kr>
     - research areas: spatio-temporal analysis, infectious disease modeling
 - 조경민 (Kyungmin, Cho) :turtle:
-    - email : ckm4514@yonsei.ac.kr
+    - email : <ckm4514@yonsei.ac.kr>
     - research areas: variational inference, bayesian neural network
 - 정여진 (Yeojin, Jung) :collision:
-    - email : yjjung1089@yonsei.ac.kr
+    - email : <yjjung1089@yonsei.ac.kr>
     - research areas: spatial GLMM, functional data analysis. spatio-temporal autologistic
 
