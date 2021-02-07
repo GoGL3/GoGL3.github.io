@@ -24,5 +24,5 @@ Our first project is the **Recommendation System**. [Brunch](https://brunch.co.k
     - research areas: variational inference, bayesian neural network
 - 정여진 (Yeojin, Jung) :collision:
     - email : yjjung1089@yonsei.ac.kr
-    - reserach areas: spatial GLMM, functional data analysis. spatio-temporal autologistic
+    - research areas: spatial GLMM, functional data analysis. spatio-temporal autologistic
 
