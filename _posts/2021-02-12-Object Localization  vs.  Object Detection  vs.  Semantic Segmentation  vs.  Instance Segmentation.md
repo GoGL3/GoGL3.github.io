@@ -15,7 +15,7 @@ categories :
 
 This is based on [CS231n note](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture11.pdf) and [stackoverflow post](https://stackoverflow.com/questions/33947823/what-is-semantic-segmentation-compared-to-segmentation-and-scene-labeling%20).
 
-![Screen Shot 2021-02-12 at 1.54.07 PM](/Users/seungmi/Library/Application Support/typora-user-images/Screen Shot 2021-02-12 at 1.54.07 PM.png)
+![Alt text](/assets/210212_object_local.png)
 
 ## 1. Object Localization
 
