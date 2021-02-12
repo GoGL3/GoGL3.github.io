@@ -45,19 +45,17 @@ This article is based on [CS231n note](https://cs231n.github.io/transfer-learnin
 
  4. Train added part (that we created in step3) in the full model.
 
-    In pytorch, I built a function like below, using squeezenet
+    In pytorch, I built a function like below, using squeezenet, 
 
-```python
-def initialize_model(num_classes, feature_extract, use_pretrained = True):
-    model_ft = models.squeezenet1_0(pretrained = use_pretrained)
-    set_parameter_requires_grad(model_ft, feature_extract)
-    model_ft.classifier[1] = nn.Conv2d(512, num_classes, kernel_size = 1, stride = 1)
-    model_ft.num_classes = num_classes
-    
-    return model_ft
-```
-
-
+    ```python
+    def initialize_model(num_classes, feature_extract, use_pretrained = True):
+        model_ft = models.squeezenet1_0(pretrained = use_pretrained)
+        set_parameter_requires_grad(model_ft, feature_extract)
+        model_ft.classifier[1] = nn.Conv2d(512, num_classes, kernel_size = 1, stride = 1)
+        model_ft.num_classes = num_classes
+        
+        return model_ft
+    ```
 
 ## 3. Fine Tuning
 
