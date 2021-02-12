@@ -21,17 +21,19 @@ categories :
 
 ## 1. Early Stopping
 
-​	Neural Network를 훈련할 때 임의로 큰 epoch 값을 지정하고, 모델이 어느정도 converge한다고 판단될 때 훈련을 중단시키는 방법이다. Epoch 값 또한 underfit/overfit와 연관이 있기 때문에 이를 신중히 판단하는 것이 중요한데, early stopping 을 설정해놓으면 그럴 필요가 없다.
+​	Early stopping is a way of arbitrarily specifying large epoch values when training a neural network and stopping training when the model seems to be converged (no siginificant improvement in validation loss). The epoch value is crucial since it is definitely related to underfitting/overfitting problems. With the early stopping method, we can easily deal with this problem. 	
 
-​	이렇게만 보면 early stopping을 적용하지 않을 이유가 없어보인다. 하지만 early stopping을 그다지 추천하지 않는다는 의견도 존재하는데, 실제로 validation error가 그다지 변화하지 않는 상태 - model has converged - 에서 더 훈련을 진행했을 때 좋은 결과가 더러 나올 뿐만 아니라 어떻게, 얼마나 전체 과정에 영향을 줄지 알지 못하기 때문이다.
+​	However, whether to implement the early stopping is controversial - Andrew Ng does not recommend using it. In fact, not only do you get some good results when you keep training even if there is no noticeable change in the validation error, but you don't know how or how much it will affect the entire process.
+
+
 
 
 
 ## 2. Weight Decay
 
-​	overfitting을 막기 위해선 모델이 지나치게 complex해지는 것을 방지하는게 필요하다. 따라서 complexity에 따라 모델에 penalty를 줄 수 있는데, 일반적으로 loss 함수에 모든 param값(weights)을 더해(정확히는 squared ver) parameter가 지나치게 많아지는 것을 막는다. parameter가 많아질 수록 모델은 점점 complex 해진다. 
+​	To prevent overfitting, it is necessary to prevent the model from being too complex. Thus, depending on the complexity, we can give the model penality, usually by adding all parameters to the loss function (exactly the squared ver) to prevent excessive parameters. The more parameters there are, the more complex the model becomes.
 
-그러나 squared norm of parameters를 loss에 추가하게 되면 loss가 지나치게 커지는 문제가 생기는데, 이때문에 어떤 작은 숫자를 곱할 수 있다. 그리고 이 곱해진 숫자를 **weight decay** 라고 한다. 전체 loss 식은 아래와 같다.
+​	However, adding squared norm of parameters to the loss function causes it to become too large. Thus we can multiply a small number to the sqaure norm to prevent this, called **weight decay**. The overall loss expression is shown below.	
 
 ```
 loss = loss + weight decay parameter * L2 norm of the weights
