@@ -35,6 +35,7 @@ As you can see from the picture above, we can classify the methods based on word
 - **Bag of Words (BoW)**: Bag of Words is a numerical representation of text data that focuses only on the frequency of words appearing without considering the order of words at all. Let's think of the process of making BoW as these two processes.
 
   > (1) First, give each word a unique integer index.
+  
   > (2) Create a vector at the location of each index that records the number of appearances. 
 
   You can use the function CountVectorizer in sklearn package to implement in python.
