@@ -19,7 +19,7 @@ categories :
 
 ​	As FC layer, GAP combines vectorized feature map linearly at the last step. However, the difference between them is a transformation matrix. GAP averaged all feature map values.	 
 
-![gap_img](/Users/seungmi/Downloads/gap_img.jpeg)
+![gap_img](/assets/210212_gap.jpeg)
 
 ​	Advantages
 
