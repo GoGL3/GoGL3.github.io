@@ -1,5 +1,5 @@
 ---
-title: "[DL 101] Object Recognition Terminology"
+title: [DL 101] Object Recognition Terminology
 date: 2021-02-11 13:000 -0400
 author : 오승미
 categories :
