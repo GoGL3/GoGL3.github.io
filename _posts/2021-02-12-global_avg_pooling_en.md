@@ -1,6 +1,6 @@
 ---
 title: "[DL 101] Global Average Pooling"
-date: 2021-02-12 12:000 -0400
+date: 2021-02-10 12:000 -0400
 author : 오승미
 categories :
   - Deep Learning
@@ -33,5 +33,5 @@ categories :
 
 - Lin, Min, Qiang Chen, and Shuicheng Yan. "Network in network." *arXiv preprint arXiv:1312.4400* (2013)
 
-- https://blog.csdn.net/yimingsilence/article/details/79227668
+- [CSDN](https://blog.csdn.net/yimingsilence/article/details/79227668)
 
