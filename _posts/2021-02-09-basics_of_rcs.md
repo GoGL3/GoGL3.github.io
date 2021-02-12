@@ -99,13 +99,30 @@ ______
 |    🙎🏾‍♂️     |      O       |     O      |   O   |                   |         |
 |    🙍🏼‍♀️     |              |            |       |         O         |    O    |
 
-​	As the more users and movies are collected, the user-item matrix gets more sparse; normally needs to be shrunk down to more attractable size through **matrix factorization**. The factorization splits this matrix into row factors and column factors that are essentially user and item embeddings. Let A to be the whole user-item interaction matrix, then it is decomposed into U and V like below. 
+​	As the more users and movies are collected, the user-item matrix gets more sparse; normally needs to be shrunk down to more attractable size through **matrix factorization**. The factorization splits this matrix into row factors and column factors that are essentially user and item embeddings. Let A to be the whole user-item interaction matrix, then it is decomposed into U (user embedding) and V (item embedding) like below (much smaller!). 
 $$
 A \approx U \times V^T
 $$
-​	Each user and item is a d-dimensional point within an embedding space. Embeddings can be learned from data;  *PCA, SVD, etc*. Compress data to find the best generalities to rely on, called latent factors. This saves space as long as the number of latent factors, k, is smaller than the harmonic mean of the number of users and items, (U\*V)/(2*(U+V)). 
+​	Each user and item is a d-dimensional point within an embedding space. Embeddings can be learned from data;  *PCA, SVD, etc*. Compress data to find the best generalities to rely on, called latent factors. This saves space as long as the number of latent factors, k, is smaller than the harmonic mean of the number of users and items, (U\*V)/(2*(U+V)).  In CF, however, the problem is when we do not have information of new users, called **cold start**. In this case, we can use averages from the other users/items for fresh users/items until sufficient interactions are made.
 
-We 
+------
 
 
 
+# Summary
+
+**pros and cons**
+
+| Method |                        Content-Based                         |                    Collborative Filtering                    |                       Knowledge-Based                        |
+| :----: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|  pros  | - No need for data about other users<br /> - Can recommend niche items | - No domain knowledge<br />- Serendipity<br />- Great starting point | - No interaction data needed<br />- Usually high-fidelity data from user self-reporting |
+|  cons  |   - Need domain knowledge<br />- Only safe recommendations   |   - Cold start<br />- Sparsity<br />- No context features    | - Need user data<br />- Need to be careful with privacy concerns |
+
+
+
+**structured/unstructured information that can be used**
+
+|     Type     |                        Content-Based                         |                    Collborative Filtering                    |                       Knowledge-Based                        |
+| :----------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|  structured  | - Genres<br />- Themes<br />- Actors/directors involved<br />- Professional ratings | - User ratings<br />- User views<br />- User wishlist/cart history<br />- User purchase/return history | - Demographic information<br />- Location/country/language<br />- Genre preferences<br />- Global filters |
+| Unstructured | - Movie summary test<br />- Stills from moview<br />- Movie trailer<br />- Professional reviews | - User reviews<br />- User-answered questions<br />- User-submitted photos<br />- User-submitted videos |                  - User 'about me' snippets                  |
