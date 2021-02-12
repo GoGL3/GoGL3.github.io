@@ -18,7 +18,7 @@ remote_theme : mmistakes/minimal-mistakes
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Hello Google"
+title                    : "GoGL's Playground"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Seungmi Oh, Kyungmin Cho, Yeojin Jung"
@@ -97,7 +97,7 @@ analytics:
 author:
   name             : "GoGL Team"
   avatar           : "/assets/gogl_main.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "We are GoGL"
+  bio              : "M.S. in Statistics & Data Science @Yonsei"
   location         : "Seoul, South Korea"
   email            :
   links:
