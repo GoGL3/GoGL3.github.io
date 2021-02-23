@@ -1,5 +1,5 @@
 ---
-title: "[Paper review] Attention is all you need"
+title: "[Paper Review] Attention is all you need"
 date: 2021-02-24 01:300 -0400
 author : 조경민
 categories :
