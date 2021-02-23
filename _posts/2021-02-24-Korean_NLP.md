@@ -1,6 +1,6 @@
 ---
 title: "[NLP] Difficulties in applying NLP models to Korean data"
-date: 2021-02-24 00:000 -0400
+date: 2021-02-24 02:000 -0400
 author : 조경민
 categories :
   - NLP
