@@ -22,17 +22,17 @@ There are several widely used subword tokenizers - BPE(Byte-Pair Encoding Tokeni
 
 Here are some github repos that offer tool for analyzing Korean text data. - KoBERT, KoELECTRA, Mecab tokenizer.... etc.
 
-[](https://github.com/BM-K/KoSentenceBERT_SKTBERT)
+<https://github.com/BM-K/KoSentenceBERT_SKTBERT>
 
-[](https://github.com/SKTBrain/KoBERT)
+<https://github.com/SKTBrain/KoBERT>
 
-[](https://github.com/monologg/KoELECTRA)
+<https://github.com/monologg/KoELECTRA>
 
-[](https://github.com/Gyunstorys/nlp-api)
+<https://github.com/Gyunstorys/nlp-api>
 
-[](https://github.com/domyounglee/korbert-mecab-multigpu)
+<https://github.com/domyounglee/korbert-mecab-multigpu>
 
-https://monologg.kr/2020/04/27/wordpiece-vocab/
+<https://monologg.kr/2020/04/27/wordpiece-vocab/>
 
 
 
@@ -46,9 +46,9 @@ Also, there are many types of morphology analyzer in Korean, so users must direc
 
 As such, Korean has yet to be settled on the dictionary for stopwords or the analysis of morphemes, so there are many things that need to be improved when performing NLP.
 
-[](https://datascienceschool.net/03%20machine%20learning/03.01.02%20KoNLPy%20%ED%95%9C%EA%B5%AD%EC%96%B4%20%EC%B2%98%EB%A6%AC%20%ED%8C%A8%ED%82%A4%EC%A7%80.html)
+<https://datascienceschool.net/03%20machine%20learning/03.01.02%20KoNLPy%20%ED%95%9C%EA%B5%AD%EC%96%B4%20%EC%B2%98%EB%A6%AC%20%ED%8C%A8%ED%82%A4%EC%A7%80.html>
 
-[](https://bab2min.tistory.com/544)
+<https://bab2min.tistory.com/544>
 
 
 
