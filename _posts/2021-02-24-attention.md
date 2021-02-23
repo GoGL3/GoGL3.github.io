@@ -1,6 +1,6 @@
 ---
 title: "[Paper review] Attention is all you need"
-date: 2021-02-24 02:000 -0400
+date: 2021-02-24 01:300 -0400
 author : 조경민
 categories :
   - Attention mechanism
