@@ -1,7 +1,4 @@
-
-
 ---
-
 title: "[DL 101] Learning Rate Scheduler"
 date: 2021-02-22 16:000 -0400
 author : 오승미
@@ -9,8 +6,6 @@ categories :
 
   - Deep Learning
   - Learning rate scheduler
-
-
 ---
 
 #   Learning Rate Scheduler
@@ -40,7 +35,7 @@ scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=[lambda1, lam
 $$
 lr_{epoch} = 
 \begin{cases}
-  \gamma*lr_{epoch-1} & \text{if epoch \mod step_size = 0} \\
+  \gamma*lr_{epoch-1} & \text{if epoch * step_size = 0} \\
   lr_{epoch-1} & \text{otherwise}
 \end{cases}
 $$
@@ -87,6 +82,8 @@ scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.1)
 $$
 \eta_{t}=\eta_{\min }+\frac{1}{2}\left(\eta_{\max }-\eta_{\min }\right)\left(1+\cos \left(\frac{T_{c u r}}{T_{\max }} \pi\right)\right)
 $$
+
+​	Decays the learning rate using a cosine annealing schedule.
 
 
 
