@@ -15,10 +15,7 @@ We can adjust the learning rate depending on *some conditions* which helps to im
 
 ## 1. Lambda LR
 
-$lr_{epoch} = lr_0*\lambda$
-$$
-lr_{epoch} = lr_0*\lambda
-$$
+$$lr_{epoch} = lr_0*\lambda$$
 
 where lr_lambda is a **function** or list(of functions to each group of parameters) and it is multiplied by the initial learning rate. 
 
