@@ -2,11 +2,11 @@
 title: "[DL 101] Learning Rate Scheduler"
 date: 2021-02-25 16:000 -0400
 author : 오승미
+use_math: true
 categories :
-
   - Deep Learning
   - Learning rate scheduler
-use_math: true
+
 ---
 
 #   Learning Rate Scheduler
@@ -15,6 +15,7 @@ We can adjust the learning rate depending on *some conditions* which helps to im
 
 ## 1. Lambda LR
 
+$lr_{epoch} = lr_0*\lambda$
 $$
 lr_{epoch} = lr_0*\lambda
 $$
