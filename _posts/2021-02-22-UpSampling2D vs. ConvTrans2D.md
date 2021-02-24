@@ -1,5 +1,3 @@
-
-
 ---
 title: "[DL 101] Upsampling"
 date: 2021-02-22 15:000 -0400
@@ -9,8 +7,6 @@ categories :
   - Deep Learning
   - Upsampling
   - ConvTransposed2D
-
-
 ---
 
 # UpSampling
