@@ -6,6 +6,7 @@ categories :
 
   - Deep Learning
   - Learning rate scheduler
+use_math: true
 ---
 
 #   Learning Rate Scheduler
