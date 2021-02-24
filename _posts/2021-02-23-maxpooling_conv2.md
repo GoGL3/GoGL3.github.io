@@ -1,7 +1,4 @@
-
-
 ---
-
 title: "[DL 101] Maxpooling? Convolutions?"
 date: 2021-02-22 15:000 -0400
 author : 오승미
@@ -10,9 +7,9 @@ categories :
   - Deep Learning
   - Maxpooling
   - Convolution
-
-
 ---
+
+
 
 You might be familiar with the Max Pooling which takes maximum values to down sample the feature map; lesser parameters for being robust to changes. 
 
