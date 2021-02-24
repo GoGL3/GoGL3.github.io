@@ -1,6 +1,6 @@
 ---
 title: "[DL 101] Learning Rate Scheduler"
-date: 2021-02-22 16:000 -0400
+date: 2021-02-25 16:000 -0400
 author : 오승미
 categories :
 
