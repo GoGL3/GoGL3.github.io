@@ -15,12 +15,6 @@ You might be familiar with the Max Pooling which takes maximum values to down sa
 
 However, maxpooling can be replaced with convolutional layers. Why? cause some feature information can be lost when running through maxpooling layers. The [medium article](https://medium.com/@duanenielsen/deep-learning-cage-match-max-pooling-vs-convolutions-e42581387cb9) shows an example of image reconstruction using VAE to compare models with a maxpooling layer and a convolutional layer. As you can see in that article, the convolutional pooling outperforms the one with the maxpooling.
 
-```python
-코드 이따가 짜기
-```
-
-
-
 
 
 Addition to this, [STRIVING FOR SIMPLICITY: THE ALL CONVOLUTIONAL NET](https://arxiv.org/pdf/1412.6806.pdf ) says that 
