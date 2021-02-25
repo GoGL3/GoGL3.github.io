@@ -11,7 +11,7 @@ categories :
   - Pretraining
 ---
 
-## BERT (Bidirectional Encoder Representations from Transformers)
+## BERT (Bidirectional Encoder Representations from Transformers)  
 
 
 
@@ -25,7 +25,7 @@ In this post, let's learn more about the detailed structure of BERT.
 
 ![](https://wikidocs.net/images/page/35594/%ED%8C%8C%EC%9D%B8%ED%8A%9C%EB%8B%9D.PNG)
 
-_(** Image from: https://wikidocs.net/115055)_
+_(** Image from: https://wikidocs.net/115055)_  
 
 
 
@@ -53,7 +53,7 @@ _(**CAUTION : The explanations from now on are based on the Base model.)_
 
 BERT uses **Contextual Embedding** as ELMo or GPT-1 does. Since I've already explained how _Transformer_ can reflect the context of corpus, I guess relating BERT to Contextual Embedding is not a difficult task. Parameter value _d_model=768 (the number of hidden features of each sentence/word)_ is fixed, which means that all words are replaced by 768-dimensional embedding vectors and used as input to BERT. After an internal operation, BERT outputs a vector of 768 dimensions for each word equally. Simply put, since _BERT itself is the combination of encoders_, I don't think it's too hard to understand this principle.
 
-After the computation of BERT, the output embedding becomes an embedding that reflects the context of the sentence, referring to all of the context. That is, the first input to BERT was simply a vector past the embedding layer, but the result of passing BERT becomes a vector with contextual information created by referring to all word vectors.
+After the computation of BERT, the output embedding becomes an embedding that reflects the context of the sentence, referring to all of the context. That is, the first input to BERT was simply a vector past the embedding layer, but the result of passing BERT becomes a vector with contextual information created by referring to all word vectors.  
 
 
 
@@ -61,7 +61,7 @@ After the computation of BERT, the output embedding becomes an embedding that re
 
 #### Details of BERT structure :
 
-So far, we've learned about the overall structure of BERT. From now on, I will explain BERT by dividing the model into **Input formatting** part & **Extracting (final) embeddings** part. Before we start with the former part, let's briefly look at the Special Tokens used in BERT in advance.
+So far, we've learned about the overall structure of BERT. From now on, I will explain BERT by dividing the model into **Input formatting** part & **Extracting (final) embeddings** part. Before we start with the former part, let's briefly look at the Special Tokens used in BERT in advance.  
 
 
 
@@ -83,7 +83,7 @@ So far, we've learned about the overall structure of BERT. From now on, I will e
 
     *Ex 2)* I love you. But I hate strawberries. -> [CLS], I, love, you, [SEP], But, I, hate, straw, ##berries, [SEP]
 
-  _** CAUTION :_ If you want to embed two sentences(inputs) to BERT, you can just distinguish between sentences with [SEP] instead of putting [CLS] in front of 'But'. FYI, '##' notation in '##berries' is generated as a result of tokenization. I will explain about subword tokenization algorithms in separate posting, so wait a second!!
+  _** CAUTION :_ If you want to embed two sentences(inputs) to BERT, you can just distinguish between sentences with [SEP] instead of putting [CLS] in front of 'But'. FYI, '##' notation in '##berries' is generated as a result of tokenization. I will explain about subword tokenization algorithms in separate posting, so wait a second!!  
 
 
 
@@ -97,7 +97,7 @@ So far, we've learned about the overall structure of BERT. From now on, I will e
 
   ![](https://miro.medium.com/max/619/1*iJqlhZz-g6ZQJ53-rE9VvA.png)
 
-  _(** Image from: https://medium.com/@_init_/why-bert-has-3-embedding-layers-and-their-implementation-details-9c261108e28a)_
+  _(** Image from: https://medium.com/@_init_/why-bert-has-3-embedding-layers-and-their-implementation-details-9c261108e28a)_  
 
   
 
@@ -109,7 +109,7 @@ So far, we've learned about the overall structure of BERT. From now on, I will e
 >
 >   There are many methods that we can use to tokenize words/sentences - WordPiece, SentencePiece, BPE, etc. Of these, WordPiece tokenization is mainly used for BERT packages. If I explain all of these contents, I think the posting will be too long, so I will post about Subword algorithms separately. Now, let's just point out that Token embeddings are done like the picture above.
 >
->   Note that, as mentioned earlier, BERT package limits max length of token to 512, so if too long text data is given as input, only important tokens should be selected or only the middle part of the text should be cut to fit the format well.
+>   Note that, as mentioned earlier, BERT package limits max length of token to 512, so if too long text data is given as input, only important tokens should be selected or only the middle part of the text should be cut to fit the format well.  
 >
 >   
 >
@@ -121,7 +121,7 @@ So far, we've learned about the overall structure of BERT. From now on, I will e
 >
 >   _(** CAUTION : BERT package only supports 2 segment representations - 0 or 1 !! So, do NOT try to embed more than 2 sentences by BERT simultaneously.)_
 >
->   The Segment Embeddings layer only has 2 vector representations. The first vector (index 0) is assigned to all tokens that belong to input 1 while the last vector (index 1) is assigned to all tokens that belong to input 2. If an input consists only of one input sentence, then its segment embedding will just be the vector corresponding to index 0 of the Segment Embeddings table.
+>   The Segment Embeddings layer only has 2 vector representations. The first vector (index 0) is assigned to all tokens that belong to input 1 while the last vector (index 1) is assigned to all tokens that belong to input 2. If an input consists only of one input sentence, then its segment embedding will just be the vector corresponding to index 0 of the Segment Embeddings table.  
 >
 >   
 >
@@ -129,7 +129,7 @@ So far, we've learned about the overall structure of BERT. From now on, I will e
 >
 >   For example, assume there are 2 sentence inputs - 'I love you', 'Love is pain'. Then, the final embedding values of the word 'love' in above two sentences will be different  due to position embeddings although the word itself is the same. Position embeddings help the model to reflect the contextual meaning of each word.
 >
->   To figure out more detail about how we can implement position embeddings, check the previous posting - '_[Paper Review] Attention is all you need_'. You can find specific way to complete position embeddings.
+>   To figure out more detail about how we can implement position embeddings, check the previous posting - '_[Paper Review] Attention is all you need_'. You can find specific way to complete position embeddings.  
 >
 >   
 >
@@ -139,7 +139,7 @@ So far, we've learned about the overall structure of BERT. From now on, I will e
 
 
 
-=> **Combining Representations** : Token Embeddings & Segment Embeddings & Position Embeddings (**Dimension of all embeddings = (1,n,768) where n: # of tokens & 1: batch size) are summed element-wise to produce a single representation with shape (1,n,768) for one sentence, for example. Then, this input representation is passed to BERT's encoder layer.
+=> **Combining Representations** : Token Embeddings & Segment Embeddings & Position Embeddings (**Dimension of all embeddings = (1,n,768) where n: # of tokens & 1: batch size) are summed element-wise to produce a single representation with shape (1,n,768) for one sentence, for example. Then, this input representation is passed to BERT's encoder layer.  
 
 
 
@@ -159,7 +159,7 @@ So far, we've learned about the overall structure of BERT. From now on, I will e
 
 So far, we've discussed about the structure of BERT and how it works. Although some details were omitted to make the posting easier to read, I will deal with some of the omitted topics in separate postings if it is necessary.
 
-Now, let's talk about **pre-training methods** of BERT and its **pooling strategy & layer choices**.
+Now, let's talk about **pre-training methods** of BERT and its **pooling strategy & layer choices**.  
 
 
 
@@ -169,7 +169,7 @@ Now, let's talk about **pre-training methods** of BERT and its **pooling strateg
 
 ### How to pre-train BERT ?
 
-There are 2 methods for pretraining BERT - _1) Masked Language Model (MLM), 2) Next Sentence Piece (NSP)_.
+There are 2 methods for pretraining BERT - _1) Masked Language Model (MLM), 2) Next Sentence Piece (NSP)_.  
 
 
 
@@ -196,7 +196,7 @@ FYI, this [MASK] token is used only for pre-training and not for fine-tuning. By
 
 ![](https://cdn-images-1.medium.com/max/2000/0*ViwaI3Vvbnd-CJSQ.png)
 
-_(** Image from : https://cdn-images-1.medium.com/max/2000/0*ViwaI3Vvbnd-CJSQ.png)_
+_(** Image from : https://cdn-images-1.medium.com/max/2000/0*ViwaI3Vvbnd-CJSQ.png)_  
 
 
 
@@ -220,7 +220,7 @@ The [CLS] token is a special token added by BERT to solve classification problem
 
 _** CAUTION : In BERT, MLM and NSP do not learn separately, but learn simultaneously by adding loss._
 
-![](https://wikidocs.net/images/page/115055/%EA%B7%B8%EB%A6%BC10.PNG)
+![](https://wikidocs.net/images/page/115055/%EA%B7%B8%EB%A6%BC10.PNG)  
 
 
 
@@ -240,7 +240,7 @@ While concatenation of the last four layers produced the best results on this sp
 
 This is partially demonstrated by noting that the different layers of BERT encode very different kinds of information, so the appropriate pooling strategy will change depending on the application because different layers encode different kinds of information.
 
-The method of generating word vectors by summing or concatenating the last 4 Layers, which is mentioned above, will be directly implemented through python code later.
+The method of generating word vectors by summing or concatenating the last 4 Layers, which is mentioned above, will be directly implemented through python code later.  
 
 
 
@@ -250,7 +250,7 @@ The method of generating word vectors by summing or concatenating the last 4 Lay
 
 FINALLY, I've explained _almost_ all of the main contents regarding BERT. Of course, there are some missing parts such as _fine-tuning_ procedure of BERT. I will explain those in later postings in more detail (hopefully with code, too). 
 
-In order to understand BERT properly, you need to be familiar with various concepts such as Transformer, MLM, and NSP, so it will not be easy to understand it flawlessly. I hope this posting will be helpful for you all !!
+In order to understand BERT properly, you need to be familiar with various concepts such as Transformer, MLM, and NSP, so it will not be easy to understand it flawlessly. I hope this posting will be helpful for you all !!  
 
 
 
