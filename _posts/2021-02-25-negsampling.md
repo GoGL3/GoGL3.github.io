@@ -24,7 +24,7 @@ Assume that _U_ is space of all possible interaction pairs. For example, if ther
 
 In the most simple scheme, we just assume all interaction pairs in _U\U*_ are real negative samples. We preset a _num_neg = k_ number and for each _(u,i) in U*_, we uniformly sample _k_ negative interactions and label them 0.
 
-```
+```python
 def get_train_instances(uids, iids, num_neg, num_items):
         """
         :objective: create negative samples in training set
