@@ -13,7 +13,7 @@ categories :
 
 ## BERT (Bidirectional Encoder Representations from Transformers)  
 
-
+#
 
 ### What is BERT ?
 
@@ -27,7 +27,7 @@ In this post, let's learn more about the detailed structure of BERT.
 
 _(** Image from: https://wikidocs.net/115055)_  
 
-
+#
 
 
 
@@ -56,14 +56,14 @@ BERT uses **Contextual Embedding** as ELMo or GPT-1 does. Since I've already exp
 After the computation of BERT, the output embedding becomes an embedding that reflects the context of the sentence, referring to all of the context. That is, the first input to BERT was simply a vector past the embedding layer, but the result of passing BERT becomes a vector with contextual information created by referring to all word vectors.  
 
 
-
+#
 
 
 #### Details of BERT structure :
 
 So far, we've learned about the overall structure of BERT. From now on, I will explain BERT by dividing the model into **Input formatting** part & **Extracting (final) embeddings** part. Before we start with the former part, let's briefly look at the Special Tokens used in BERT in advance.  
 
-
+##
 
 - **Special Tokens for BERT** :
 
@@ -85,7 +85,7 @@ So far, we've learned about the overall structure of BERT. From now on, I will e
 
   _** CAUTION :_ If you want to embed two sentences(inputs) to BERT, you can just distinguish between sentences with [SEP] instead of putting [CLS] in front of 'But'. FYI, '##' notation in '##berries' is generated as a result of tokenization. I will explain about subword tokenization algorithms in separate posting, so wait a second!!  
 
-
+#
 
 - **Input Formatting - Embedding layers**:
 
@@ -99,7 +99,7 @@ So far, we've learned about the overall structure of BERT. From now on, I will e
 
   _(** Image from: https://medium.com/@_init_/why-bert-has-3-embedding-layers-and-their-implementation-details-9c261108e28a)_  
 
-  
+##  
 
 > - **Token embeddings** : As alluded to in the previous section, the role of the Token Embeddings layer is to transform words into vector representations of fixed dimension. In the case of BERT, each word is represented as a 768-dimensional vector.
 >
@@ -111,7 +111,7 @@ So far, we've learned about the overall structure of BERT. From now on, I will e
 >
 >   Note that, as mentioned earlier, BERT package limits max length of token to 512, so if too long text data is given as input, only important tokens should be selected or only the middle part of the text should be cut to fit the format well.  
 >
->   
+>
 >
 > - **Segment Embeddings** : BERT is able to solve NLP tasks that involve text classification given a pair of input texts. An example of such a problem is classifying whether two pieces of text are semantically similar. The pair of input text are simply concatenated and fed into the model. So how does BERT distinguishes the inputs in a given pair? The answer is Segment Embeddings.
 >
@@ -138,13 +138,13 @@ So far, we've learned about the overall structure of BERT. From now on, I will e
 >   ![](https://wikidocs.net/images/page/115055/%EA%B7%B8%EB%A6%BC11.PNG)
 
 
-
+###
 => **Combining Representations** : Token Embeddings & Segment Embeddings & Position Embeddings (**Dimension of all embeddings = (1,n,768) where n: # of tokens & 1: batch size) are summed element-wise to produce a single representation with shape (1,n,768) for one sentence, for example. Then, this input representation is passed to BERT's encoder layer.  
 
 
 
 
-
+#
 - **Extracting Embeddings - Transformer Encoders** :
 
   Actually, there is nothing much to explain in detail about Extracting Embeddings part. BERT uses 12 Transformer Encoders(12 layers for Base model) to extract final embedding values of a sentence. So, what you have to do is just format the input text by passing it through the Embedding layers, which were mentioned above, then let the Transformer Encoders to give us corresponding outputs. To learn more about the mechanism of Transformer in detail, go back to our blog and check out the previous posting about Attention. 
@@ -165,14 +165,14 @@ Now, let's talk about **pre-training methods** of BERT and its **pooling strateg
 
 
 
-
+#
 
 ### How to pre-train BERT ?
 
 There are 2 methods for pretraining BERT - _1) Masked Language Model (MLM), 2) Next Sentence Piece (NSP)_.  
 
 
-
+##
 #### 1) Masked Language Model (MLM) :
 
 For pre-training purposes, BERT randomly masks 15% of the input text that goes into an artificial neural network. And then, it let the artificial neural network predict these masked words. This is like drilling a hole in the words in the middle, and try to predict the words that will go into the hole. For example, just give the sentence 'I go to [MASK] and buy bread and [MASK]' and make them match 'Super' and 'Milk'.
@@ -200,7 +200,7 @@ _(** Image from : https://cdn-images-1.medium.com/max/2000/0*ViwaI3Vvbnd-CJSQ.pn
 
 
 
-
+##
 
 #### 2) Next Sentence Piece (NSP) :
 
@@ -225,7 +225,7 @@ _** CAUTION : In BERT, MLM and NSP do not learn separately, but learn simultaneo
 
 
 
-
+#
 
 
 ### Pooling Strategy & Layer Choice
@@ -244,7 +244,7 @@ The method of generating word vectors by summing or concatenating the last 4 Lay
 
 
 
-
+#
 
 ### So....
 
@@ -253,7 +253,7 @@ FINALLY, I've explained _almost_ all of the main contents regarding BERT. Of cou
 In order to understand BERT properly, you need to be familiar with various concepts such as Transformer, MLM, and NSP, so it will not be easy to understand it flawlessly. I hope this posting will be helpful for you all !!  
 
 
-
+#
 
 
 #### Reference :
