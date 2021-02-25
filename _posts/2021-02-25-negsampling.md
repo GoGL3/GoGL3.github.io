@@ -1,5 +1,5 @@
 ---
-title: "[RecBasics] Negative samples in Top-K recommendation task (Part 1)"
+title: "[RecBasics] Negative samples in Top-K recommender task (Part 1)"
 date: 2021-02-25 10:00 -0400
 author : 정여진
 categories :
