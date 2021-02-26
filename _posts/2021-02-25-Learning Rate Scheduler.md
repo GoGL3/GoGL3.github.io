@@ -80,9 +80,9 @@ scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.1)
 
 ## 4. CosineAnnealingLR
 
-$$\begin{align}
+$\begin{align}
 \eta_{t}=\eta_{\min }+\frac{1}{2}\left(\eta_{\max }-\eta_{\min }\right)\left(1+\cos \left(\frac{T_{c u r}}{T_{\max }} \pi\right)\right)
-\end{align}$$
+\end{align}$
 
 ​	Decays the learning rate using a cosine annealing schedule; thus combining both periods with hot learning rates and cold learning rates - improving model performance.
 
