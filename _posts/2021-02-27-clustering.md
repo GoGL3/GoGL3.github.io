@@ -24,7 +24,7 @@ import seaborn as sns
 import umap
 ```
 
-### Import dataset (Keyword sets)
+### Import dataset (Keyword sets - length:635609)
 ```ruby
 keyword = pd.read_csv('keyword.csv')
 def clean_alt_list(list_):
@@ -137,7 +137,7 @@ for idx, sent in enumerate(sents):
 ```
 _(** CAUTION: Depending on the size of data, it can take LOOOONG time !!)_  
 
-### Import toy data obtained by above method
+### Import toy data obtained by above method (length:1501)
 ```ruby
 with open('keyword_embed.pkl', 'rb') as f:
     x = pickle.load(f)
