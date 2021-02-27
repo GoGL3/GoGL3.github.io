@@ -143,6 +143,7 @@ with open('keyword_embed.pkl', 'rb') as f:
     x = pickle.load(f)
 data = np.asarray(x)
 ```  
+![Alt text](/assets/shape.jpg)
 
 ### Dimension Reduction - 1) UMAP
 ```ruby
