@@ -13,7 +13,7 @@
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-repository               : "GoGL3/GoGL3.github.io"
+#repository               : "GoGL3/GoGL3.github.io"
 
 remote_theme : mmistakes/minimal-mistakes
 
@@ -33,10 +33,11 @@ masthead_title           : # overrides the website title displayed in the masthe
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : "utterances"
-  utterances:
-    theme                : "github-dark"
-    issue_term           : "pathname" 
+  provider: "facebook"
+  facebook:
+    appid: # optional
+    num_posts: 5 
+    colorscheme: "dark"
     
 reCaptcha:
   siteKey                :
