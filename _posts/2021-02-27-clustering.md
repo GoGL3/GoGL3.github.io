@@ -17,9 +17,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 %matplotlib inline
 import seaborn as sns
-from sklearn.preprocessing import normalize
-from soyclustering import SphericalKMeans
-from scipy.sparse import csr_matrix
 import umap
 ```
 
