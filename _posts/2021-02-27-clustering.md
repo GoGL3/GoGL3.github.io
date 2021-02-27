@@ -10,6 +10,8 @@ categories :
   - UMAP
 ---
 
+## Text Clustering - BERT + Dimension reduction + KMeans
+
 _**(CAUTION : You should pip install necessary packages such as transformers to run all codes below without error !!)**_
 
 ```ruby
