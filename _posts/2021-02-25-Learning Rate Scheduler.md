@@ -4,8 +4,10 @@ date: 2021-02-25 16:000 -0400
 author : 오승미
 use_math: true
 categories :
-  - Deep Learning
-  - Learning rate scheduler
+  - deep-learning
+tags :
+  - learning-rate-scheduler
+  - deep-learning
 
 ---
 

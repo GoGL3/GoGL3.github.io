@@ -3,10 +3,12 @@ title: "[DL 101] Early Stopping, Weight Decay"
 date: 2021-02-12 12:000 -0400
 author : 오승미
 categories :
-  - Deep Learning
-  - Regularization
-  - Early Stopping
-  - Weight Decay
+  - deep-learning
+tags :
+  - deep-learning
+  - regularization
+  - early-stopping
+  - weight-decay
 
 
 ---

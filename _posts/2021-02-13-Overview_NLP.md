@@ -4,7 +4,10 @@ date: 2021-02-13 09:000 -0400
 author : 조경민
 categories :
   - NLP
-  - Pretrained models
+  - paper-review
+tags :
+  - NLP
+  - pretrained-models
 
 ---
 

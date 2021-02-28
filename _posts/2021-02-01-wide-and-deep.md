@@ -3,6 +3,10 @@ title: "[Paper Review] Wide & Deep Learning for Recommender Systems (2016)"
 date: 2021-01-31 14:000 -0400
 author : 정여진
 categories :
+  - recommendation-system
+  - deep-learning
+  - paper-review
+tags :
   - recommendation
   - deep-learning
 ---

@@ -3,9 +3,11 @@ title: "[DL 101] Autoencoder Tutorial (Pytorch)"
 date: 2021-02-20 15:000 -0400
 author : 오승미
 categories :
-  - Deep Learning
-  - Autoencoder
-
+  - deep-learning
+  - pytorch
+tags :
+  - deep-learning
+  - autoencoder
 
 ---
 

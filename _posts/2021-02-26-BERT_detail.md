@@ -3,8 +3,11 @@ title: "[NLP] How does BERT work?"
 date: 2021-02-26 02:000 -0400
 author : 조경민
 categories :
-  - BERT
+  - NLP
+  - transformer
+tags :
   - Transformer
+  - BERT
   - NLP
   - MLM
   - NSP

@@ -3,8 +3,9 @@ title: "[DL 101] Maxpooling? Convolutions?"
 date: 2021-02-22 15:000 -0400
 author : 오승미
 categories :
-
-  - Deep Learning
+  - deep-learning
+tags :
+  - deep-learning
   - Maxpooling
   - Convolution
 ---
