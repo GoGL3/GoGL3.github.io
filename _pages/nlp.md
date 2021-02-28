@@ -1,4 +1,3 @@
-
 ---
 title: "NLP Project"
 permalink: /nlp/
@@ -8,4 +7,5 @@ layout: single
 ---
 
 ## Project 2 : NLP
+
  _add details_
