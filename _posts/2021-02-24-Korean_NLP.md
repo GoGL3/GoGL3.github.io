@@ -4,9 +4,11 @@ date: 2021-02-24 02:000 -0400
 author : 조경민
 categories :
   - NLP
+tags :
   - Korean
   - Tokenization
   - Stopwords
+  - NLP
 
 ---
 

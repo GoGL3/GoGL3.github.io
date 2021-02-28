@@ -7,4 +7,6 @@ toc: true
 tags: [Recsys]
 ---
 
-Outline of our project: :
+## Project 1: Brunch Articles Recommender (Kakao Arena)
+
+_add details_

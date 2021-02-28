@@ -3,7 +3,9 @@ title: "[RecBasics] Negative samples in Top-K recommender task (Part 1)"
 date: 2021-02-25 10:00 -0400
 author : 정여진
 categories :
-  - recommendation
+  - recommendation-system
+  tags :
+  - recommendation-system
   - negative-sampling
   - deep-learning
 ---

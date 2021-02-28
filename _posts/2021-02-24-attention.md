@@ -3,12 +3,15 @@ title: "[Paper Review] Attention is all you need"
 date: 2021-02-24 07:000 -0400
 author : 조경민
 categories :
+  - NLP
+  - paper-review
+  - transformer
+  tags :
   - Attention mechanism
   - Transformer
   - NLP
-  - Encoder
-  - Decoder
-  - Parallelization
+  - encoder
+  - parallelization
 ---
 
 ## **Attention is all you need** (2017)

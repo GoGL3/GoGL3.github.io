@@ -3,6 +3,9 @@ title: "[NLP] Code - BERT + KMeans"
 date: 2021-02-27 16:000 -0400
 author : 조경민
 categories :
+  - transformer
+  - NLP
+tags : 
   - BERT
   - NLP
   - KMeans

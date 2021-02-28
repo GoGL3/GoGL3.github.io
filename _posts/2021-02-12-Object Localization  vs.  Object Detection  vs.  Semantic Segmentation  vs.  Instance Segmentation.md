@@ -3,10 +3,12 @@ title: "[DL 101] Object Recognition Terminology"
 date: 2021-02-11 13:000 -0400
 author : 오승미
 categories :
-  - Deep Learning
-  - Object Recognition
-  - Object Detection
-  - Segmentation 
+  - deep-learning
+tags :
+  - deep-learning
+  - object-recognition
+  - object-detection
+  - segmentation 
 
 
 ---
