@@ -1,7 +1,11 @@
 # main links
 main:
-  - title: "Projects"
-    url: /
+  - title: "Category"
+    url: "/categories/"
+  - title: "RecSys"
+    url: "/recommendation-system/"
+  - title: "NLP"
+    url: "/nlp/"
   - title: "About"
     url: /about/
   # - title: "Sample Collections"

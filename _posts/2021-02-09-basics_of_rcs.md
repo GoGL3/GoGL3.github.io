@@ -3,9 +3,11 @@ title: Fundamentals of the Recommendation System
 date: 2021-02-09 14:00:00-0400
 author: 오승미
 categories : 
-  - recommendation system
-  - collaborative filtering
-  - content-based
+  - recommendation-system
+tags : 
+  - recommendation
+  - collaborative-filtering
+  - content-based-filtering
 
 
 ---

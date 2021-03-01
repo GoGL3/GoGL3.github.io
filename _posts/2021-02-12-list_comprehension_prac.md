@@ -3,7 +3,9 @@ title: "[DL 101] List comprehension"
 date: 2021-02-12 14:000 -0400
 author : 오승미
 categories :
-  - List comprehension
+  - deep-learning
+tags :
+  - List-comprehension
   - python
 
 
