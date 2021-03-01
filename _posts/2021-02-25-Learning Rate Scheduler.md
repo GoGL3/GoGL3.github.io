@@ -15,9 +15,7 @@ We can adjust the learning rate depending on *some conditions* which helps to im
 
 ## 1. Lambda LR
 
-$$\begin{align}
-lr_{epoch} = lr_0*\lambda
-\end{align}$$
+$ lr_{epoch} = lr_0*\lambda $
 
 where lr_lambda is a **function** or list(of functions to each group of parameters) and it is multiplied by the initial learning rate. 
 
@@ -33,13 +31,11 @@ scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=[lambda1, lam
 
 ## 2. Step LR
 
-$$ \begin{align}
-lr_{epoch} = 
+$ lr_{epoch} = 
 \begin{cases}
   \gamma*lr_{epoch-1} & \text{if epoch * step_size = 0} \\
   lr_{epoch-1} & \text{otherwise}
-\end{cases}
-\end{align} $$
+\end{cases} $
 
 ​	Decays the learning rate of each parameter by gamma every step_size epochs. Normally, set the step_size to be five epochs; meaning that decaying the lr every five epoch. Assume that the initial learning rate is 0.05 for all groups, step_size = 2 and gamma = 0.1, lr = 0.005 if 2 <= epoch < 4, lr = 0.0005 if 4 <= epoch < 6, so on.
 
@@ -64,9 +60,7 @@ scheduler.step()
 
 ## 3. Exponential LR
 
-$$\begin{align}
-lr_{epoch} = \gamma * lr_{epoch-1}
-\end{align}$$
+$ lr_{epoch} = \gamma * lr_{epoch-1} $
 
 Decays the learning rate by gamma every epoch.	
 
@@ -80,9 +74,7 @@ scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.1)
 
 ## 4. CosineAnnealingLR
 
-$\begin{align}
-\eta_{t}=\eta_{\min }+\frac{1}{2}\left(\eta_{\max }-\eta_{\min }\right)\left(1+\cos \left(\frac{T_{c u r}}{T_{\max }} \pi\right)\right)
-\end{align}$
+$ \eta_{t}=\eta_{\min }+\frac{1}{2}\left(\eta_{\max }-\eta_{\min }\right)\left(1+\cos \left(\frac{T_{c u r}}{T_{\max }} \pi\right)\right) $
 
 ​	Decays the learning rate using a cosine annealing schedule; thus combining both periods with hot learning rates and cold learning rates - improving model performance.
 
