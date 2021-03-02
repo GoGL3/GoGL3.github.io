@@ -4,11 +4,13 @@ date: 2021-02-25 10:00 -0400
 author : 정여진
 categories :
   - recommendation-system
-  tags :
+tags :
   - recommendation-system
   - negative-sampling
   - deep-learning
+
 ---
+
 
 In this post, we will dive into negative sampling for test / train instances in recommendation system.
 
