@@ -54,7 +54,7 @@ In those cases, it is useful to use **Fixed attention** (Figure (c)) pattern, wh
 
 ![Alt text](/assets/ST_fix.jpg)
 
--> _EX) If the stride is 128 and c=8, all future positions greater than 128 can attend to positions 120~128, all positions greater than 256 can attend to 248~256, and so forth._
+-> _EX) If the stride is 128 and c=8, all future positions greater than 128 can attend to positions 120-128, all positions greater than 256 can attend to 248-256, and so forth._
 
 
 
