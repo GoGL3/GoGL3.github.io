@@ -33,11 +33,11 @@ scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=[lambda1, lam
 
 ## 2. Step LR
 
-$ lr_{epoch} = 
+$$ lr_{epoch} = 
 \begin{cases}
   \gamma*lr_{epoch-1} & \text{if epoch * step_size = 0} \\
   lr_{epoch-1} & \text{otherwise}
-\end{cases} $
+\end{cases} $$
 
 ​	Decays the learning rate of each parameter by gamma every step_size epochs. Normally, set the step_size to be five epochs; meaning that decaying the lr every five epoch. Assume that the initial learning rate is 0.05 for all groups, step_size = 2 and gamma = 0.1, lr = 0.005 if 2 <= epoch < 4, lr = 0.0005 if 4 <= epoch < 6, so on.
 
