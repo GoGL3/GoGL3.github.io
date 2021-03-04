@@ -8,6 +8,9 @@
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "seungmi530@gmail.com"
+    - label: "Github"
+      icon: "fab fa-fw fa-github-square"
+      url: "https://github.com/Seungmi122"
 
 조경민:
   name        : "조경민"
@@ -17,6 +20,9 @@
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: ""
+    - label: "Github"
+      icon: "fab fa-fw fa-github-square"
+      url: "https://github.com/ckm4514"
       
 정여진:
   name        : "정여진"
@@ -26,3 +32,6 @@
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "yjjung1089@yonsei.ac.kr"
+    - label: "Github"
+      icon: "fab fa-fw fa-github-square"
+      url: "https://github.com/kelseyj3411"
