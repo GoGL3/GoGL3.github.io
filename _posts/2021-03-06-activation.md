@@ -1,4 +1,3 @@
-
 ---
 title: "[DL] Activation Functions"
 date: 2021-03-06 10:000 -0400
