@@ -6,7 +6,7 @@ categories :
   - NLP
   - paper-review
   - transformer
-  tags :
+tags :
   - Attention mechanism
   - Transformer
   - NLP
