@@ -1,6 +1,6 @@
 ---
 title: "[NLP] Google Duplex - 'Jarvis' comes true?"
-date: 2021-03-11 10:000 -0400
+date: 2021-03-12 10:000 -0400
 author : 정여진
 categories :
   - paper-review
