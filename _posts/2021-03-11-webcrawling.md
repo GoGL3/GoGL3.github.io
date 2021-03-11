@@ -192,11 +192,11 @@ So, how to get ${selector} ?
 
 Go to iHerb website and open developer tool - Option+Ctrl+I in Mac. With the blue cursor icon on top of the developer tool, you can directly point out the location you want to extract information from. In the image below, I locate the cursor on the price area so the related part in the developer tool is shaded out. 
 
-![2021-03-11-web_crawl_capture](/Users/seungmi/workspace/studying/goGoogle/GoGL3.github.io/assets/2021-03-11-web_crawl_capture.png)
+![2021-03-11-web_crawl_capture](/assets/2021-03-11-web_crawl_capture.png)
 
 Copy the selected area's **selector**. It works like an address of "price", informing our crawling machine that "price" information is here!.
 
-![2021-03-11-crawl_copy](/Users/seungmi/workspace/studying/goGoogle/GoGL3.github.io/assets/2021-03-11-crawl_copy.png)
+![2021-03-11-crawl_copy](/assets/2021-03-11-crawl_copy.png)
 
 
 
