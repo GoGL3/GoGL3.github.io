@@ -42,7 +42,7 @@ We use $k$ maximum possible anchor boxes for each window and set three anchor bo
 
 ![2021-03-11-faster4](/assets/2021-03-11-faster4.png)
 
-Thus the regression layer outputs 4k coordinates of k bounding boxes and the classification layer does 2k values that estimate the probabiltity whether an object exists for each anchor box. 
+Thus the regression layer outputs 4k coordinates of k bounding boxes and the classification layer does 2k values that estimate the probabiltity whether an object exists for each anchor box. Since we adopt RPN to predict region proposals, we only focus on 2k classification scores. Reducing the overlapped area between anchors, we implement non-maximum suppression (like bottom-up approach in selective search that we covered [here](https://gogl3.github.io/computer%20vision/fast_rcnn/)) based on classification scores and set the IoU threshold to be 0.7, leaving around only 2000 region proposals for each image.
 
 Then the left procedure is the same as Fast R-CNN; processing RoI pooling where inputs to be the whole image and the predicted bounding boxes (by RPN in Faster R-CNN but selective search in Fast R-CNN) and run through FC layers.
 
