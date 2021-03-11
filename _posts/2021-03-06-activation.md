@@ -11,7 +11,7 @@ tags :
 use_math : true
 ---
 
-
+e
 Today we will look at different activation functions, especially the family of **ReLU (Rectified Linear Unit)** activation function. The role of activation functions in neural networks is taking the input and mapping it into output that goes into next layer. Deciding which  activation function to use heavily depends on the target. Overall, there are two types of activation functions :
 > Linear and Non-linear activation functions
 
@@ -30,11 +30,11 @@ Now let's look at different types of non-linear activation functions. The most c
 
 ### Sigmoid / Hyperbolic-tangent 
 
-$$ sigmoid(x) = \frac{1}{1+e^{-x}} $$
+$ sigmoid(x) = \frac{1}{1+e^{-x}} $ \\
 
 Because the range is confined to be between 0 and 1, it is often used in predicting probability tasks. 
 
-$$ tanh(x) = \frac{e^{2x}-1}{e^{2x}+1} $$
+$ tanh(x) = \frac{e^{2x}-1}{e^{2x}+1} $ \\
 
 Shape of tanh is similar to sigmoid. The only difference is that tanh is symmetric around zero. Advantage is that the negative values will strongly be mapped negative and zero near zero. It is used in two-class classification task. When classifying multiple classes, we use **Softmax** function. 
 
@@ -42,13 +42,14 @@ Shape of tanh is similar to sigmoid. The only difference is that tanh is symmetr
 
 
 ### ReLU
-$$ relu(x) = max(1,x) $$
+$ relu(x) = max(1,x) $ \\
 
 ReLU aims to resolve vanishing or exploding gradients problem that arises when the model gets deeper. The activation functions's gradient is confined to 0~1. Bur ReLU still has some problems. Because gradient is 0 at some nodes, those nodes will not contribute to network anymore. This is called _dying ReLU_. 
 
 ### Leaky ReLU (LReLU)
 $$
-\lrelu(x)= \begin{cases}
+\lrelu(x)= 
+\begin{cases}
  &\alpha x \text{ if }x\leq 0\\ 
  &x \text{ if } x> 0\\ 
 \end{cases}
@@ -60,7 +61,7 @@ where $\alpha = 0.01$. (If $\alpha$ is trainable, it becomes **paramterized ReLU
 ### Exponential Linear Unit (ELU)
 
 $$
- \elu(x)=
+\elu(x)=
 \begin{cases}
  &\alpha(exp(x)-1) \text{ if }x\leq 0\\ 
  &x \text{ if } x> 0\\ 
@@ -72,7 +73,7 @@ ELU speeds up learning by centering activations around zero, rather than using b
 
 ### Scaled Exponential Linear Unit (SELU)
 $$
- selu(x)= 
+selu(x)= 
 \lambda
 \begin{cases}
  &\alpha(exp(x)-1) \text{ if }x\leq 0\\ 
