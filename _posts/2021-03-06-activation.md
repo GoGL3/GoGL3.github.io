@@ -1,5 +1,5 @@
 ---
-title: "[DL101] Activation Functions"
+title: "[DL 101] Activation Functions"
 date: 2021-03-11 10:000 -0400
 author : 정여진
 categories :
@@ -30,61 +30,49 @@ Now let's look at different types of non-linear activation functions. The most c
 
 ### Sigmoid / Hyperbolic-tangent 
 
-$$
-sigmoid(x) = \frac{1}{1+e^{-x}}
-$$
+$$sigmoid(x) = \frac{1}{1+e^{-x}}$$
 
 Because the range is confined to be between 0 and 1, it is often used in predicting probability tasks. 
 
-$$
-tanh(x) = \frac{e^{2x}-1}{e^{2x}+1}
-$$
+$$tanh(x) = \frac{e^{2x}-1}{e^{2x}+1}$$
 
 Shape of tanh is similar to sigmoid. The only difference is that tanh is symmetric around zero. Advantage is that the negative values will strongly be mapped negative and zero near zero. It is used in two-class classification task. When classifying multiple classes, we use **Softmax** function. 
 
-![2021-03-06](/assets/2021-03-06-activation1.png)
+![2021-03-06](/assets/2021-03-11-activation1.png)
 
 
 ### ReLU
-$$
-relu(x) = max(1,x)
-$$
+$$relu(x) = max(1,x)$$
 
 ReLU aims to resolve vanishing or exploding gradients problem that arises when the model gets deeper. The activation functions's gradient is confined to 0~1. Bur ReLU still has some problems. Because gradient is 0 at some nodes, those nodes will not contribute to network anymore. This is called _dying ReLU_. 
 
 ### Leaky ReLU (LReLU)
-$$
-lrelu(x)=
+$$lrelu(x)=
 \begin{cases}
  &\alpha x \text{ if }x\leq 0\\ 
  &x \text{ if } x> 0\\ 
-\end{cases}
-$$
+\end{cases}$$
 
 where $\alpha = 0.01$. (If $\alpha$ is trainable, it becomes **paramterized ReLU**) Because the gradient is a very small number $\alpha$ instead of 0 (the leak), 
 
 
 ### Exponential Linear Unit (ELU)
 
-$$
-elu(x)=
+$$elu(x)=
 \begin{cases}
  &\alpha(exp(x)-1) \text{ if }x\leq 0\\ 
  &x \text{ if } x> 0\\ 
-\end{cases}
-$$
+\end{cases}$$
 
 where $\alpha=1$
 ELU speeds up learning by centering activations around zero, rather than using batch normalization. It decreases the bias (the ouput is always positive or 0) shift present in ReLU that slows down learning. 
 
 ### Scaled Exponential Linear Unit (SELU)
-$$
-selu(x)= \lambda
+$$selu(x)= \lambda
 \begin{cases}
  &\alpha(exp(x)-1) \text{ if }x\leq 0\\ 
  &x \text{ if } x> 0\\ 
-\end{cases}
-$$
+\end{cases}$$
 
 where $\alpha = 1.6733, \lambda = 1.0507$. It is scaled version of ELU and thus has unit variance. As layers are increased, activations will converge to zero mean and unit variance and make learning highly robust.
 
@@ -92,14 +80,12 @@ In this [paper](https://arxiv.org/pdf/1804.02763.pdf), the author tests the perf
 
 ### Swish
 
-![2021-03-06](/assets/2021-03-06-activation2.png)
+![2021-03-06](/assets/2021-03-11-activation2.png)
 
-$$
-swish(x)= xsigmoid(x) = \frac{x}{1+e^{-x}}
-$$
+$$swish(x)= xsigmoid(x) = \frac{x}{1+e^{-x}}$$
 
 This activation function was developed by Google engineers. It performs fast and more accurately when model gets deeper. The function is **differentiable** at all points but is not monotonic. This means that activations may decrease even when inputs are increasing.
 
 
 ### Overview
-![2021-03-06](/assets/2021-03-06-activation3.png)
+![2021-03-06](/assets/2021-03-11-activation3.png)
