@@ -11,7 +11,6 @@ tags :
 use_math : true
 ---
 
-e
 Today we will look at different activation functions, especially the family of **ReLU (Rectified Linear Unit)** activation function. The role of activation functions in neural networks is taking the input and mapping it into output that goes into next layer. Deciding which  activation function to use heavily depends on the target. Overall, there are two types of activation functions :
 > Linear and Non-linear activation functions
 
@@ -30,11 +29,15 @@ Now let's look at different types of non-linear activation functions. The most c
 
 ### Sigmoid / Hyperbolic-tangent 
 
-$ sigmoid(x) = \frac{1}{1+e^{-x}} $ \\
+$$ 
+\frac{1}{1+e^{-x}}
+$$
 
 Because the range is confined to be between 0 and 1, it is often used in predicting probability tasks. 
 
-$ tanh(x) = \frac{e^{2x}-1}{e^{2x}+1} $ \\
+$$ 
+\frac{e^{2x}-1}{e^{2x}+1}
+$$
 
 Shape of tanh is similar to sigmoid. The only difference is that tanh is symmetric around zero. Advantage is that the negative values will strongly be mapped negative and zero near zero. It is used in two-class classification task. When classifying multiple classes, we use **Softmax** function. 
 
@@ -42,14 +45,16 @@ Shape of tanh is similar to sigmoid. The only difference is that tanh is symmetr
 
 
 ### ReLU
-$ relu(x) = max(1,x) $ \\
+$$
+relu(x) = max(1,x)
+$$
 
 ReLU aims to resolve vanishing or exploding gradients problem that arises when the model gets deeper. The activation functions's gradient is confined to 0~1. Bur ReLU still has some problems. Because gradient is 0 at some nodes, those nodes will not contribute to network anymore. This is called _dying ReLU_. 
 
 ### Leaky ReLU (LReLU)
 $$
-\lrelu(x)= 
 \begin{cases}
+lrelu(x)=
  &\alpha x \text{ if }x\leq 0\\ 
  &x \text{ if } x> 0\\ 
 \end{cases}
@@ -89,7 +94,9 @@ In this [paper](https://arxiv.org/pdf/1804.02763.pdf), the author tests the perf
 
 ![2021-03-06](/assets/2021-03-11-activation2.png)
 
-$$ swish(x)= xsigmoid(x) = \frac{x}{1+e^{-x}} $$
+$$ 
+swish(x)= xsigmoid(x) = \frac{x}{1+e^{-x}}
+$$
 
 This activation function was developed by Google engineers. It performs fast and more accurately when model gets deeper. The function is **differentiable** at all points but is not monotonic. This means that activations may decrease even when inputs are increasing.
 
