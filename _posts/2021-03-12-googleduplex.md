@@ -9,6 +9,7 @@ tags :
   - NLP
   - deep-learning
 ---
+
 ![2021-03-12](/assets/2021-03-12-duplex1.png)
 
 You wake up and it's 8:00 a.m. You have to hurry to get to work on time. You get ready, grab some sandwiches, and rush to your car. While driving, you realize that you have a date tonight and need to make a reservation at some fancy restaurant. But remember, you are on a rush and you have no time to make a call. Google Assistant can help you. You can say, "Hey Google, make a reservation for two at 6:00p.m. at Sushi-in." Then Boom! Google Assistant **calls** the restaturant, **generates** human voice and makes a reservation.
@@ -17,7 +18,9 @@ Google Duplex is a name for the technology supporting Google Assistant. This ser
 
 
 ## Technology
+
 ![2021-03-12](/assets/2021-03-12-duplex2.png)
+
 Of course, some insanely high quality NLP is used in Duplex. First, the device has to understand what the person is saying even with some background noise (speech-to-text). Next, the context of the complex sentences needs to be analyzed and correct responses need to be  generated (natural language understanding). Finally, this response has to be transformed into human-like voice (text-to-speech). Google Duplex trained the models **separately** for each task (one for business appointment, one for reservation etc). Models used are recurrent neural network (RNN) combined with Google’s Automatic Speech Recognition (ASR) technology, parameters of the conversation (e.g., desired time, names), and a text-to-speech (TTS) system.
 
 ### Further reading:
