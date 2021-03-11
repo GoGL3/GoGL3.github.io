@@ -53,8 +53,8 @@ ReLU aims to resolve vanishing or exploding gradients problem that arises when t
 
 ### Leaky ReLU (LReLU)
 $$
-\begin{cases}
 lrelu(x)=
+\begin{cases}
  &\alpha x \text{ if }x\leq 0\\ 
  &x \text{ if } x> 0\\ 
 \end{cases}
