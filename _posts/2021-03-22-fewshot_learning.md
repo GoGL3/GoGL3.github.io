@@ -1,7 +1,7 @@
 ---
 title: "[CV] Few Shot Learning"
 excerpt: "Intro to Few Shot Learning"
-date: 2021-03-23 06:000 -0400
+date: 2021-03-22 06:000 -0400
 author : 오승미
 use_math: true
 tags :
