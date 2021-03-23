@@ -3,8 +3,9 @@
 # Site wide configuration
 ####################################
 #
-title: GoGL
-description: Hello World
+title: KangBK
+email: lejkbk0930@gmai.com
+description: 반갑습니다!
 url: # the base hostname & protocol for your site
 
 
@@ -18,109 +19,29 @@ markdown:          kramdown
 mathjax: true
 highlighter:       rouge
 excerpt_separator: <!--more-->
-permalink:         /posts/:year-:month/:title
-
+permalink:         /articles/:year-:month/:title
 
 kramdown:
-  input: GFM
-  hard_wrap: false
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
-# Reading Files
-include:
-  - .htaccess
-  - _pages
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - vendor
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/plugins
-  - assets/js/_main.js
-  - assets/js/vendor
-  - Capfile
-  - CHANGELOG
-  - config
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - log
-  - node_modules
-  - package.json
-  - package-lock.json
-  - Rakefile
-  - README
-  - tmp
-  - /docs # ignore Minimal Mistakes /docs
-  - /test # ignore Minimal Mistakes /test
-keep_files:
-  - .git
-  - .svn
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-# Sass/SCSS
-sass:
-  sass_dir: _sass
-  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-
-
-# Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
-# HTML Compression
-# - https://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
-
-
-# Defaults
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-
-# Math equation
-markdown: kramdown
-highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
-
+#
 ###################################
 # Site Owner configuration
 ####################################
 #
 owner:
-  name: GoGL
-  avatar: gogl_main.png
-  job: "M.S in Statistics & Data Science @ Yonsei"
-  bio: "Eager to learn what we don't know, welcome you to share what we've learned"
-  email: #
-  disqus-shortname: GoGL
+  name: 고글고글
+  avatar: logo.png
+  job: "연세대 컴퓨터과학과 | 연세대 빅데이터 학회 yBigTa"
+  bio: "반갑습니당"
+  email: lejkbk0930@gmail.com
+  disqus-shortname: KangBK
   twitter: #username
-  facebook: #ㅕㄴㄷ구믇
+  facebook: #KangBK0120
   google:
     plus: #username
     analytics:
@@ -128,9 +49,9 @@ owner:
     ad-client:
     ad-slot:
   bing-verify:
-  github: #username
+  github: #KangBK0120
   gitlab: #username
-  stackoverflow: #123456/username   
+  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
   linkedin: #username
   skype: #username
   xing: #username

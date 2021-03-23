@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "[CV] Few Shot Learning"
-excerpt: "Intro to Few Shot Learning"
+date: 2021-03-23 24:000 -0400
 author : 오승미
 use_math: true
 tags :
@@ -11,7 +10,11 @@ tags :
 categories:
 - computer vision
 - deep-learning
+
 ---
+
+
+
 
 
 meta learning: learn to learn
