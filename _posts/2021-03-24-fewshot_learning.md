@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "[CV] Few Shot Learning"
 excerpt: "Intro to Few Shot Learning"
 author : 오승미
