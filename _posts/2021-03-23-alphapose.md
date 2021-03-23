@@ -1,7 +1,7 @@
 ---
 title: "Pose Estimation - AlphaPose and its application"
 excerpt: "[AlphaPose](http://www.mvig.org/research/alphapose.html) is an accurate multi-person pose estimator, which is the first open-source system that achieves 70+ mAP (75 mAP) on COCO dataset and 80+ mAP (82.1 mAP) on MPII dataset."
-date: 2021-03-23 22:000 -0400
+date: 2021-03-23 06:000 -0400
 author : 오승미
 use_math: true
 tags :
