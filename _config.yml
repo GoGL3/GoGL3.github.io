@@ -4,9 +4,10 @@
 ####################################
 #
 title: GoGL
+subtitle: study AI
 email: #
 description: #
-url: # the base hostname & protocol for your site
+url: "https://gogl3.github.io" # the base hostname & protocol for your site
 
 
 #
@@ -34,14 +35,14 @@ kramdown:
 ####################################
 #
 owner:
-  name: Team GoGL 
+  name: Team GoGL
   avatar: logo_last.png
   job: "M.S. in Statistics & Data Science, Yonsei"
   bio: "Trying to blend in with the A.I. madness"
-  email: 
-  disqus-shortname: 
+  email:
+  disqus-shortname:
   twitter: #username
-  facebook: 
+  facebook:
   google:
     plus: #username
     analytics:
