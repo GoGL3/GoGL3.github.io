@@ -3,9 +3,9 @@
 # Site wide configuration
 ####################################
 #
-title: KangBK
-email: lejkbk0930@gmai.com
-description: 반갑습니다!
+title: GoGL
+email: #
+description: #
 url: # the base hostname & protocol for your site
 
 
@@ -36,10 +36,10 @@ kramdown:
 owner:
   name: 고글고글
   avatar: logo.png
-  job: "연세대 컴퓨터과학과 | 연세대 빅데이터 학회 yBigTa"
-  bio: "반갑습니당"
-  email: lejkbk0930@gmail.com
-  disqus-shortname: KangBK
+  job: "연세대 통계데이터사이언스학과 석사과정"
+  bio: "오승미 조경민 정여진입니당"
+  email: 
+  disqus-shortname: 
   twitter: #username
   facebook: #KangBK0120
   google:
