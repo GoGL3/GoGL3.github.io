@@ -1,6 +1,6 @@
 ---
 title: "[Paper Review] Faster R-CNN"
-excerpt: "Fast R-CNN starts from the idea: `What if using convolutional feature maps for generating region proposals?`"
+excerpt: "Fast R-CNN starts from the idea: What if using convolutional feature maps for generating region proposals?"
 date: 2021-03-11 02:000 -0400
 author : 오승미
 use_math: true
