@@ -5,7 +5,7 @@
 #
 title: GoGL
 description: Hello World
-url: https://GoGL3.github.io # the base hostname & protocol for your site
+url: # the base hostname & protocol for your site
 
 
 #
@@ -18,7 +18,7 @@ markdown:          kramdown
 mathjax: true
 highlighter:       rouge
 excerpt_separator: <!--more-->
-permalink:         /articles/:year-:month/:title
+permalink:         /posts/:year-:month/:title
 
 kramdown:
   auto_ids: true
@@ -50,7 +50,7 @@ owner:
   bing-verify:
   github: #username
   gitlab: #username
-  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
+  stackoverflow: #123456/username   
   linkedin: #username
   skype: #username
   xing: #username
