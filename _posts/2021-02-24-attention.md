@@ -1,6 +1,6 @@
 ---
 title: "[Paper Review] Attention is all you need"
-excerpt: "In this posting, we will review a paper titled "Attention is all you need," which introduces the **_attention mechanism_** and **_Transformer_** structure that are still widely used in NLP and other fields. BERT, which was covered in the last posting, is the typical NLP model using this attention mechanism and Transformer. Although Attention and Transformer are actively used in NLP, they are also used in many areas where recurrent methods were used. From now on, let's take a closer look at what Attention and Transformer are."
+excerpt: "In this posting, we will review a paper titled: Attention is all you need, which introduces the ttention mechanism and Transformer structure that are still widely used in NLP and other fields. BERT, which was covered in the last posting, is the typical NLP model using this attention mechanism and Transformer. Although Attention and Transformer are actively used in NLP, they are also used in many areas where recurrent methods were used. From now on, let's take a closer look at what Attention and Transformer are."
 date: 2021-02-24 07:000 -0400
 author : 조경민
 categories :

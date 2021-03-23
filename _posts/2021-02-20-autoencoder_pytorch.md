@@ -1,6 +1,6 @@
 ---
 title: "[DL 101] Autoencoder Tutorial (Pytorch)"
-excerpt: "Today we are going to build a simple autoencoder model using pytorch. We'll flatten CIFAR-10 dataset into 3072(=32*3\*3) vectors then train the autoencoder with these flattened data."
+excerpt: "Today we are going to build a simple autoencoder model using pytorch. We'll flatten CIFAR-10 dataset vectors then train the autoencoder with these flattened data."
 date: 2021-02-20 15:000 -0400
 author : 오승미
 categories :
