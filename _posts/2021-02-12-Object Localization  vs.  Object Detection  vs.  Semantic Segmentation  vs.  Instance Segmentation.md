@@ -1,5 +1,6 @@
 ---
 title: "[DL 101] Object Recognition Terminology"
+excerpt: "What is object localization, object detection, semantic segmentation and instance segmentation?"
 date: 2021-02-11 13:000 -0400
 author : 오승미
 categories :
@@ -8,7 +9,7 @@ tags :
   - deep-learning
   - object-recognition
   - object-detection
-  - segmentation 
+  - segmentation
 
 
 ---
@@ -41,9 +42,8 @@ The class is labeled per pixel because it focuses only on the pixel of the image
 
 where 0 denotes background.
 
-![enter image description here](https://i.stack.imgur.com/mPFUo.jpg) 
+![enter image description here](https://i.stack.imgur.com/mPFUo.jpg)
 
 ## 4. Instance Segmentation
 
 ​	Further to semantic segmentation, even the same class is expressed in different colors to distinguish the instance. In the fourth picture right above, each chair is distinguished by different colors.
-

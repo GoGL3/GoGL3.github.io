@@ -1,5 +1,6 @@
 ---
 title: "[RecBasics] Negative samples in Top-K recommender task (Part 1)"
+excerpt: "In this post, we will dive into negative sampling for test / train instances in recommendation system."
 date: 2021-02-25 10:00 -0400
 author : 정여진
 categories :
@@ -58,7 +59,7 @@ def get_train_instances(uids, iids, num_neg, num_items):
 ```
 
 
-If more auxiliary information is available, we can sample more reliable negative instances such as _clicked but not bought_ items. Other methods include oversampling hard negative samples (dynamic negative sampling, DNS) and frequency-based sampling. In 2019, (Ding, 2019) proposed a reinforcement learning based negative sampling (RNS) that generates exposure-alike negative instances. 
+If more auxiliary information is available, we can sample more reliable negative instances such as _clicked but not bought_ items. Other methods include oversampling hard negative samples (dynamic negative sampling, DNS) and frequency-based sampling. In 2019, (Ding, 2019) proposed a reinforcement learning based negative sampling (RNS) that generates exposure-alike negative instances.
 
 
 _In Part2, we will look at how test data of Top-k recommender task is generated._

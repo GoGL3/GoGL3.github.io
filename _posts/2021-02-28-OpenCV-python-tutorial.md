@@ -1,5 +1,6 @@
 ---
 title: "[DL 101] OpenCV python tutorial"
+excerpt: "Take baby steps towards the Computer Vision master"
 date: 2021-02-28 22:000 -0400
 author : 오승미
 use_math: true
@@ -27,7 +28,7 @@ def show(img):
     plt.imshow(img)
     plt.axis('off')
     plt.show()
-    
+
 ```
 
 
@@ -69,7 +70,7 @@ show(img_resized)
 ## 4. Crop and Flip
 
 ```python
-img_cropped = img.copy() 
+img_cropped = img.copy()
 img_cropped = img_cropped[10:400, 100:270]
 img_cropped = cv2.flip(img_cropped, 1)
 show(img_cropped)
@@ -195,7 +196,7 @@ show(img_box)
 
 ## 11. CLAHE (Contrast Limited Adaptive Histogram Equalization)
 
-**Image Histogram** shows the distribution of pixels against its darkness. If the histogram is skewed, the image does not look good, identifiable with our naked eyes. In this case, we apply **histogram equalization** to **equalize** the distribution of darkness so that the image looks clearer. CLAHE divide the image into small titles and equialize respectively because  normally an image has both bright and dark areas, so if we apply the same criteria to the whole image, the output might not be helpful for further approach. 
+**Image Histogram** shows the distribution of pixels against its darkness. If the histogram is skewed, the image does not look good, identifiable with our naked eyes. In this case, we apply **histogram equalization** to **equalize** the distribution of darkness so that the image looks clearer. CLAHE divide the image into small titles and equialize respectively because  normally an image has both bright and dark areas, so if we apply the same criteria to the whole image, the output might not be helpful for further approach.
 
 ```python
 img_clahe = img.copy()
@@ -220,7 +221,7 @@ Can you tell the difference? Hopefully yes :)
 ```python
 import numpy as np
 
-# subtract parts 
+# subtract parts
 img_cropped = img.copy()
 img_cropped = img_cropped[50:250, 100:220]
 

@@ -1,5 +1,6 @@
 ---
 title: "[DL 101] Early Stopping, Weight Decay"
+excerpt: "regularization methods: early stopping, weight decay"
 date: 2021-02-12 12:000 -0400
 author : 오승미
 categories :
@@ -35,7 +36,7 @@ tags :
 
 ​	To prevent overfitting, it is necessary to prevent the model from being too complex. Thus, depending on the complexity, we can give the model penality, usually by adding all parameters to the loss function (exactly the squared ver) to prevent excessive parameters. The more parameters there are, the more complex the model becomes.
 
-​	However, adding squared norm of parameters to the loss function causes it to become too large. Thus we can multiply a small number to the sqaure norm to prevent this, called **weight decay**. The overall loss expression is shown below.	
+​	However, adding squared norm of parameters to the loss function causes it to become too large. Thus we can multiply a small number to the sqaure norm to prevent this, called **weight decay**. The overall loss expression is shown below.
 
 ```
 loss = loss + weight decay parameter * L2 norm of the weights

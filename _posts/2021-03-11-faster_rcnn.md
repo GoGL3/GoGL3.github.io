@@ -1,5 +1,6 @@
 ---
 title: "[Paper Review] Faster R-CNN"
+excerpt: "Fast R-CNN starts from the idea: `What if using convolutional feature maps for generating region proposals?`"
 date: 2021-03-11 02:000 -0400
 author : 오승미
 use_math: true
@@ -14,7 +15,7 @@ categories:
 
 From previous posts, we reviewed R-CNN and Fast R-CNN.
 
-Clearly, Fast R-CNN speeds up the overall process compared to R-CNN but it still uses selective search for region proposals, which is time and cost consuming. 
+Clearly, Fast R-CNN speeds up the overall process compared to R-CNN but it still uses selective search for region proposals, which is time and cost consuming.
 
 Fast R-CNN starts from the idea:
 
@@ -22,9 +23,9 @@ Fast R-CNN starts from the idea:
 
 
 
-**Faster R-CNN** includes region proposal part inside the model instead of the selective search. 
+**Faster R-CNN** includes region proposal part inside the model instead of the selective search.
 
-Basically Faster R-CNN follows Fast R-CNN structure but *Region Proposal Network* is added between the conv feature map and RoI pooling layer like below. 
+Basically Faster R-CNN follows Fast R-CNN structure but *Region Proposal Network* is added between the conv feature map and RoI pooling layer like below.
 
 <img src="/assets/2021-03-11-faster1.png" alt="/assets/2021-03-11-faster1" style="zoom: 50%;" />
 
@@ -32,13 +33,13 @@ Basically Faster R-CNN follows Fast R-CNN structure but *Region Proposal Network
 
 ## Region Proposal Network
 
-After CNN process, we have a conv feature map that is going to be input to RPN. As you can see in the below picture, **slides a n x n spatial window** (n=3 in this paper) of the feature map to predict region proposals. Note that an anchor is a box in this model and we locate it to the center of the sliding window. 
+After CNN process, we have a conv feature map that is going to be input to RPN. As you can see in the below picture, **slides a n x n spatial window** (n=3 in this paper) of the feature map to predict region proposals. Note that an anchor is a box in this model and we locate it to the center of the sliding window.
 
 ![2021-03-11-faster2](/assets/2021-03-11-faster2.png)
 
 
 
-We use $k$ maximum possible anchor boxes for each window and set three anchor box areas of 128<sup>2</sup>, 256<sup>2</sup> and 512<sup>2</sup> pixels and three aspect ratios of 1:1, 1:2, and 2:1, thus nine different anchor boxes in total (k=9). The graph illustrates nine different anchor boxes. Due to a variey in its scales and ratios, we expect it to capture the RoI well. 
+We use $k$ maximum possible anchor boxes for each window and set three anchor box areas of 128<sup>2</sup>, 256<sup>2</sup> and 512<sup>2</sup> pixels and three aspect ratios of 1:1, 1:2, and 2:1, thus nine different anchor boxes in total (k=9). The graph illustrates nine different anchor boxes. Due to a variey in its scales and ratios, we expect it to capture the RoI well.
 
 ![2021-03-11-faster4](/assets/2021-03-11-faster4.png)
 

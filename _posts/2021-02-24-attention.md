@@ -1,5 +1,6 @@
 ---
 title: "[Paper Review] Attention is all you need"
+excerpt: "In this posting, we will review a paper titled "Attention is all you need," which introduces the **_attention mechanism_** and **_Transformer_** structure that are still widely used in NLP and other fields. BERT, which was covered in the last posting, is the typical NLP model using this attention mechanism and Transformer. Although Attention and Transformer are actively used in NLP, they are also used in many areas where recurrent methods were used. From now on, let's take a closer look at what Attention and Transformer are."
 date: 2021-02-24 07:000 -0400
 author : 조경민
 categories :
@@ -42,7 +43,7 @@ Is it still difficult to understand the concept? That's all right. Let's look at
 
   _(** Image from: https://pozalabs.github.io/assets/images/sdpa.PNG)_
 
-  
+
 
   The term 'attention' mentioned in the paper is more specifically referred to as 'Scaled Dot-Product Attention'. The formula of Attention is as follows.
 
@@ -50,7 +51,7 @@ Is it still difficult to understand the concept? That's all right. Let's look at
 
   _(** Image from: https://miro.medium.com/max/372/1*1K-KmzrFUZWh5aVu61Be1g.png)_
 
-  
+
 
   **Query(Q), Key(K), Value(V)** mentioned in the above expression means:
 
@@ -64,17 +65,17 @@ Is it still difficult to understand the concept? That's all right. Let's look at
 
   _(** Image from: https://wikidocs.net/22893)_
 
-  
+
 
   - **1) QK^T part**: The dimension of Q and K is d_k and the dimension of V is d_v. The key and value will have the same value regardless of where the attention is made. When you calculate the dot-product for the query and key, you can find the similarity between each query and key. (e.g. Cosine similarity is a similarity measure that divides the dot-product into the magnitude of the vector.)
 
   - **1-2) Scaling part**: It is called 'Scaled' Dot-Product Attention because dot-product is scaled with the square root value of d_k. The reason for scaling is that the greater the value of dot-products, the less change in slope in the softmax function.
 
-  - **2) Softmax part**: After scaling, we apply softmax to get weights for values. It can be understood that this is a way to give V attention according to Q and K. 
+  - **2) Softmax part**: After scaling, we apply softmax to get weights for values. It can be understood that this is a way to give V attention according to Q and K.
 
   - **3) Final multiplication part**: If you multiply the result of procedure 2) to V, the final value will be higher as it is more similar to the query (which implies more important value). This fits the principle of _attention_ - take attention to important information.
 
-    
+
 
   ##### _Procedure by images_ (Not necessarily LSTM / Not EXACT -> Just focus on flows)
 
@@ -106,9 +107,9 @@ Is it still difficult to understand the concept? That's all right. Let's look at
 
   _(** Image from: https://pozalabs.github.io/transformer/ & https://i0.wp.com/rubikscode.net/wp-content/uploads/2019/08/image-7.png?resize=549%2C115&ssl=1)_
 
-  
 
-  It is better to implement different linear projections on keys, values, and queries respectively for h times than applying single attention function to d_model dimensional inputs (Reason for better performance: This procedure can reduce the size of vectors and make parallelization possible). In other words, different weight matrix W (W^Q, W^K, W^V for each i) should be multiplied to the same Q, K, and V. The projected keys, values, and queries are then passed through the attention function and then yield the value with dimension d_v. 
+
+  It is better to implement different linear projections on keys, values, and queries respectively for h times than applying single attention function to d_model dimensional inputs (Reason for better performance: This procedure can reduce the size of vectors and make parallelization possible). In other words, different weight matrix W (W^Q, W^K, W^V for each i) should be multiplied to the same Q, K, and V. The projected keys, values, and queries are then passed through the attention function and then yield the value with dimension d_v.
 
   Then, after concatenating multiple heads, the projection is performed again, and finally a value with dimensions of d_model is derived.
 
@@ -132,7 +133,7 @@ Is it still difficult to understand the concept? That's all right. Let's look at
 
   The self-attention layer of the decoder is intended to refer only to the previous positions of the output sequence. In other words, to maintain auto-regressive properties using the i-th output as the (i+1)th input, it masks all positions after the i-th position when the attention value of i-th position is obtained. FYI, masking out means setting the input value of softmax(in attention score formula) to negative infinity.
 
-  
+
 
   _Masking example_ :
 
@@ -148,9 +149,9 @@ Is it still difficult to understand the concept? That's all right. Let's look at
 
   ![](https://pozalabs.github.io/assets/images/encoder-decoder%20attention.png)
 
-  
 
-  Queries come from the previous decoder layer and keys & values come from the output of the encoder. So in every position in the decoder, you can give attention to the input sequence, that is, to every position in the encoder output. The reason query is the output of the decoder layer is that query itself is the condition. To explain further, the question is, 'What should be output when we have this value in decoder?' As I explained before, the masking had already been done in decoder part, so we get attention values till i-th position through decoder. 
+
+  Queries come from the previous decoder layer and keys & values come from the output of the encoder. So in every position in the decoder, you can give attention to the input sequence, that is, to every position in the encoder output. The reason query is the output of the decoder layer is that query itself is the condition. To explain further, the question is, 'What should be output when we have this value in decoder?' As I explained before, the masking had already been done in decoder part, so we get attention values till i-th position through decoder.
 
 
 
@@ -196,7 +197,7 @@ Is it still difficult to understand the concept? That's all right. Let's look at
 
   ![Alt text](/assets/norm1.jpg)
 
-  All hidden units in the same layer share the same mu and sigma. 
+  All hidden units in the same layer share the same mu and sigma.
 
   ![Alt text](/assets/norm2.jpg)
 
@@ -227,14 +228,14 @@ Is it still difficult to understand the concept? That's all right. Let's look at
   _Properties of positional encoding vector_ :
 
   ![Alt text](/assets/pos3.jpg)
-  
-  Note that c=10000^(2i/d_model). This implies that we can express PE_(pos+k) as a linear function of PE_pos. Because of this nature, the model can learn attention more easily using relative position. The reason why we need linear transformation is that when the PE is expressed as [sin, cos, sin, cos, ...] for k, PE for k+phi must be expressed as [sin, cos, sin, cos, ...] too, to use the PE function at each location. 
 
-  
+  Note that c=10000^(2i/d_model). This implies that we can express PE_(pos+k) as a linear function of PE_pos. Because of this nature, the model can learn attention more easily using relative position. The reason why we need linear transformation is that when the PE is expressed as [sin, cos, sin, cos, ...] for k, PE for k+phi must be expressed as [sin, cos, sin, cos, ...] too, to use the PE function at each location.
+
+
 
   _i.e._ :
 
-  
+
 
   ![](https://miro.medium.com/max/608/0*kt2D3yPL2FdvddO2)
 
@@ -242,7 +243,7 @@ Is it still difficult to understand the concept? That's all right. Let's look at
 
   If transformation of PE from time step k to k+phi can be obtained by linear transformation, the calculation becomes much more efficient.
 
-  
+
 
 
 

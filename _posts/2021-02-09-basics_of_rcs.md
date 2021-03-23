@@ -1,10 +1,11 @@
 ---
 title: Fundamentals of the Recommendation System
+excerpt: "Fundamental recommendation system models, content-based, collaborative-filtering and knowledge-based"
 date: 2021-02-09 14:00:00-0400
 author: 오승미
-categories : 
+categories :
   - recommendation-system
-tags : 
+tags :
   - recommendation
   - collaborative-filtering
   - content-based-filtering
@@ -54,13 +55,13 @@ Based on the *[Advanced Machine Learning with TensorFlow on Google Cloud Platfor
 | :-----: | :----: | :-----: | :---: | :----: |
 |   10    |   0    |    7    |   4   |   17   |
 
-​	The above matrix is a five-dimensional embedded feature space that we use to represent movies. Normalizing the above matrix, now we get the **user feature vector**. 
+​	The above matrix is a five-dimensional embedded feature space that we use to represent movies. Normalizing the above matrix, now we get the **user feature vector**.
 
 | Fantasy | Action | Cartoon | Drama | Comedy |
 | :-----: | :----: | :-----: | :---: | :----: |
 |  0.26   |   0    |  0.18   | 0.11  |  0.45  |
 
-​	The above vector is the user feature vector. Note that "0" for the Action genre does not mean that the user dislikes it because none of the movies he/she has previously rated contains the Action feature. 
+​	The above vector is the user feature vector. Note that "0" for the Action genre does not mean that the user dislikes it because none of the movies he/she has previously rated contains the Action feature.
 
 ### Step 4. User Rating Prediction
 
@@ -102,7 +103,7 @@ ______
 |    🙎🏾‍♂️     |      O       |     O      |   O   |                   |         |
 |    🙍🏼‍♀️     |              |            |       |         O         |    O    |
 
-​	As the more users and movies are collected, the user-item matrix gets more sparse; normally needs to be shrunk down to more attractable size through **matrix factorization**. The factorization splits this matrix into row factors and column factors that are essentially user and item embeddings. Let A to be the whole user-item interaction matrix, then it is decomposed into U (user embedding) and V (item embedding) like below (much smaller!). 
+​	As the more users and movies are collected, the user-item matrix gets more sparse; normally needs to be shrunk down to more attractable size through **matrix factorization**. The factorization splits this matrix into row factors and column factors that are essentially user and item embeddings. Let A to be the whole user-item interaction matrix, then it is decomposed into U (user embedding) and V (item embedding) like below (much smaller!).
 $$
 A \approx U \times V^T
 $$

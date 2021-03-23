@@ -1,10 +1,11 @@
 ---
 title: "[DL 101] Transfer Learning  vs.  Fine Tuning  vs.  Training from scratch"
+excerpt: "What is transfer learning and why?"
 date: 2021-02-12 15:000 -0400
 author : 오승미
 categories :
   - deep-learning
-  - transfer-learning
+
 tags :
   - deep-learning
   - transfer-learning
@@ -29,7 +30,7 @@ This article is based on [CS231n note](https://cs231n.github.io/transfer-learnin
 
 ​	Actually, however, it is not easy to have enough datasets for training. Therefore, in many cases, convolutional networks are often built on models that are already sufficiently trained with large data. Not only does it save time, but it can also improve performance even more.
 
-**Steps** 
+**Steps**
 
  1. Choose a pretrained model. (resnet, alexnet, googlenet etc)
 
@@ -48,7 +49,7 @@ This article is based on [CS231n note](https://cs231n.github.io/transfer-learnin
 
  4. Train added part (that we created in step3) in the full model.
 
-    In pytorch, I built a function like below, using squeezenet, 
+    In pytorch, I built a function like below, using squeezenet,
 
     ```python
     def initialize_model(num_classes, feature_extract, use_pretrained = True):
@@ -56,7 +57,7 @@ This article is based on [CS231n note](https://cs231n.github.io/transfer-learnin
         set_parameter_requires_grad(model_ft, feature_extract)
         model_ft.classifier[1] = nn.Conv2d(512, num_classes, kernel_size = 1, stride = 1)
         model_ft.num_classes = num_classes
-        
+
         return model_ft
     ```
 
@@ -66,7 +67,7 @@ This article is based on [CS231n note](https://cs231n.github.io/transfer-learnin
 
 
 
-## Then, when and how to use those concepts properly? 
+## Then, when and how to use those concepts properly?
 
 ​	There are four scenarios based on the *size* of the new dataset and the *similarity* of the original dataset. Let's look at how each of the three methods should be applied.
 
@@ -77,4 +78,3 @@ This article is based on [CS231n note](https://cs231n.github.io/transfer-learnin
 ​	**3. New dataset is small but very different from the original**  Appropriate to train the linear classification only.
 
 ​	**4. New dataset is large and very different from the original** If you have enough data size, you can train from scratch. However, the weights of the pretrained model still can be applied during the initialization phase.
-

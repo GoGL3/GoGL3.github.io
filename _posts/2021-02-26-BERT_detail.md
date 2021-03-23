@@ -1,5 +1,6 @@
 ---
 title: "[NLP] How does BERT work?"
+excerpt: "BERT is a pre-trained model released by Google in 2018, and has been used a lot so far, showing the highest performance in many NLP tasks. In this post, let's learn more about the detailed structure of BERT."
 date: 2021-02-26 02:000 -0400
 author : 조경민
 categories :
@@ -16,7 +17,7 @@ tags :
 
 ## BERT (Bidirectional Encoder Representations from Transformers)  
 
- 
+
 
 ### What is BERT ?
 
@@ -96,7 +97,7 @@ So far, we've learned about the overall structure of BERT. From now on, I will e
 
   Embedding layer part consists of three layers - _1) Token embeddings, 2) Segment embeddings, 3) Position embeddings_.
 
-  
+
 
   ![](https://miro.medium.com/max/619/1*iJqlhZz-g6ZQJ53-rE9VvA.png)
 
@@ -150,9 +151,9 @@ So far, we've learned about the overall structure of BERT. From now on, I will e
 
 - **Extracting Embeddings - Transformer Encoders** :
 
-  Actually, there is nothing much to explain in detail about Extracting Embeddings part. BERT uses 12 Transformer Encoders(12 layers for Base model) to extract final embedding values of a sentence. So, what you have to do is just format the input text by passing it through the Embedding layers, which were mentioned above, then let the Transformer Encoders to give us corresponding outputs. To learn more about the mechanism of Transformer in detail, go back to our blog and check out the previous posting about Attention. 
+  Actually, there is nothing much to explain in detail about Extracting Embeddings part. BERT uses 12 Transformer Encoders(12 layers for Base model) to extract final embedding values of a sentence. So, what you have to do is just format the input text by passing it through the Embedding layers, which were mentioned above, then let the Transformer Encoders to give us corresponding outputs. To learn more about the mechanism of Transformer in detail, go back to our blog and check out the previous posting about Attention.
 
-  
+
 
   ![](https://wikidocs.net/images/page/115055/%EA%B7%B8%EB%A6%BC4.PNG)
 
@@ -209,7 +210,7 @@ _(** Image from : https://cdn-images-1.medium.com/max/2000/0*ViwaI3Vvbnd-CJSQ.pn
 
 This pre-training task is performed because it is important to understand the relationship between two sentences, such as QA or Natural Language Inference (NLI) among several important NLP tasks. They are not captured in language modeling. Therefore, BERT perform the _binarized next sentence preference task_ to determine whether the two sentences in corpus were attached immediately after the original corpus.
 
-After giving two sentences, BERT trains them by matching whether the sentence is a continuous sentence or not. To do this, we give and train two sentences that are actually connected and two randomly attached sentences at a ratio of 50:50. 
+After giving two sentences, BERT trains them by matching whether the sentence is a continuous sentence or not. To do this, we give and train two sentences that are actually connected and two randomly attached sentences at a ratio of 50:50.
 
 >*Ex)*
 >
@@ -251,7 +252,7 @@ The method of generating word vectors by summing or concatenating the last 4 Lay
 
 ### So....
 
-FINALLY, I've explained _almost_ all of the main contents regarding BERT. Of course, there are some missing parts such as _fine-tuning_ procedure of BERT. I will explain those in later postings in more detail (hopefully with code, too). 
+FINALLY, I've explained _almost_ all of the main contents regarding BERT. Of course, there are some missing parts such as _fine-tuning_ procedure of BERT. I will explain those in later postings in more detail (hopefully with code, too).
 
 In order to understand BERT properly, you need to be familiar with various concepts such as Transformer, MLM, and NSP, so it will not be easy to understand it flawlessly. I hope this posting will be helpful for you all !!  
 
@@ -267,4 +268,3 @@ In order to understand BERT properly, you need to be familiar with various conce
 
 - https://wikidocs.net/115055
 - https://tmaxai.github.io/post/BERT/
-

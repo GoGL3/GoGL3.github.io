@@ -1,5 +1,6 @@
 ---
 title: "Web-crawling using Python"
+excerpt: "Today, we are going to know how to crawl iherb using Python, especially information about supplements. "
 date: 2021-03-11 22:000 -0400
 author : 오승미
 use_math: true
@@ -11,7 +12,7 @@ tags :
 
 ---
 
-Today, we are going to know how to crawl [iherb](https://kr.iherb.com/) using Python, especially information about supplements. 
+Today, we are going to know how to crawl [iherb](https://kr.iherb.com/) using Python, especially information about supplements.
 
 ## Scheme
 
@@ -91,27 +92,27 @@ def get_nutrition_info(nutritions):
             if regex.search(tmp[-2])==None:
                 item = tmp[:-1]
                 amnt = tmp[-1]
-                try: 
+                try:
                     int_amnt = float(amnt[:regex.search(amnt).start()].replace(",",""))
-                except: 
+                except:
                     if amnt.isdigit():
                         amnt = int(amnt)
                         unit = None
                     else:
                         item = tmp
                         amnt = unit = None
-                else: 
+                else:
                     unit = regex.findall(amnt)[0]
                     amnt = int_amnt
             else:
                 item = tmp[:-2]
                 amnt = tmp[-2]
-                try: 
+                try:
                     int_amnt = float(amnt[:regex.search(amnt).start()].replace(",",""))
-                except: 
+                except:
                     item = tmp
                     amnt = unit = None
-                else: 
+                else:
                     unit = regex.findall(amnt)[0]
                     amnt = int_amnt
             rtn[num_elem]['element'] = " ".join(item)
@@ -153,7 +154,7 @@ def get_details(product_url, rtn):
 
   try:
       category = find_category(a_tag)
-  except: 
+  except:
       category = None
 
   try:
@@ -164,7 +165,7 @@ def get_details(product_url, rtn):
 
   try:
       nutritions = browser.find_element_by_css_selector('body > div.product-grouping-wrapper.defer-block > article > div.container.product-overview > div > section > div.inner-content > div > div > div.col-xs-24.col-md-10 > div').text
-  except: 
+  except:
       nutritions = None
   # download image
   fname = str(prod_idx)+".jpg"
@@ -186,11 +187,11 @@ def get_details(product_url, rtn):
 
   return rtn
 ```
-As you can see, **try and except** are frequently used since some products' information has not been updated yet. ​*W​e​ ​s​ho​u​l​d​ ​co​ns​id​e​r​ ​a​ll​ ​t​h​e​se​ ​e​x​c​e​p​ti​o​n​s*:bulb: 
+As you can see, **try and except** are frequently used since some products' information has not been updated yet. ​*W​e​ ​s​ho​u​l​d​ ​co​ns​id​e​r​ ​a​ll​ ​t​h​e​se​ ​e​x​c​e​p​ti​o​n​s*:bulb:
 
 So, how to get ${selector} ?
 
-Go to iHerb website and open developer tool - Option+Ctrl+I in Mac. With the blue cursor icon on top of the developer tool, you can directly point out the location you want to extract information from. In the image below, I locate the cursor on the price area so the related part in the developer tool is shaded out. 
+Go to iHerb website and open developer tool - Option+Ctrl+I in Mac. With the blue cursor icon on top of the developer tool, you can directly point out the location you want to extract information from. In the image below, I locate the cursor on the price area so the related part in the developer tool is shaded out.
 
 ![2021-03-11-web_crawl_capture](/assets/2021-03-11-web_crawl_capture.png)
 
@@ -234,27 +235,27 @@ def get_nutrition_info(nutritions):
             if regex.search(tmp[-2])==None:
                 item = tmp[:-1]
                 amnt = tmp[-1]
-                try: 
+                try:
                     int_amnt = float(amnt[:regex.search(amnt).start()].replace(",",""))
-                except: 
+                except:
                     if amnt.isdigit():
                         amnt = int(amnt)
                         unit = None
                     else:
                         item = tmp
                         amnt = unit = None
-                else: 
+                else:
                     unit = regex.findall(amnt)[0]
                     amnt = int_amnt
             else:
                 item = tmp[:-2]
                 amnt = tmp[-2]
-                try: 
+                try:
                     int_amnt = float(amnt[:regex.search(amnt).start()].replace(",",""))
-                except: 
+                except:
                     item = tmp
                     amnt = unit = None
-                else: 
+                else:
                     unit = regex.findall(amnt)[0]
                     amnt = int_amnt
             rtn[num_elem]['element'] = " ".join(item)
@@ -281,14 +282,14 @@ def find_category(a_tag):
 return rtn
 ```
 
- **get_nutrition_info** function might seem a bit complex, lots of regex and conditions. Remind that we should prevent all these exceptions! 
+ **get_nutrition_info** function might seem a bit complex, lots of regex and conditions. Remind that we should prevent all these exceptions!
 
 *Since it takes a while to finish crawling, it is better to crawl all the information and then process data rather than trying to subtract and process it while crawling.*
 
 ```python
 def crawl_n_pages(target_url='https://kr.iherb.com/c/supplements?sr=10',
                  from_page = 1, to_page = 3):
-    
+
     # load from the saved file
     if os.path.exists('iherb_supp_crawling.json'):
         with open('iherb_supp_crawling.json', 'r', encoding="utf-8") as f:
@@ -298,24 +299,24 @@ def crawl_n_pages(target_url='https://kr.iherb.com/c/supplements?sr=10',
 
     else:
         data, prod_list = [], []
-    
+
     chrome_driver_path = ${chrome_driver_path}
     options=webdriver.ChromeOptions()
     options.add_argument(${user agent information})
     options.add_argument('--no-sandbox')
 
     browser = webdriver.Chrome(chrome_driver_path, options = options)
-    
+
     for i in range(from_page, to_page+1):
         pages = 1
         supp_page_urls=[]
-        
+
         browser.get(target_url+"&p=%d" % i)
 
         html = browser.page_source
         soup = BeautifulSoup(html, 'html.parser')
         prod_url=soup.find_all("a",{'class':"absolute-link product-link"})
-        
+
         for j, url_tag in enumerate(prod_url):
             if url_tag['data-part-number'] in prod_list:
                 print("-----------already collected----------")
@@ -324,24 +325,23 @@ def crawl_n_pages(target_url='https://kr.iherb.com/c/supplements?sr=10',
                 print(url_tag['href'])
                 data = get_details(url_tag['href'], data)
             pages += 1
-            
+
             if pages % 10 == 0:
                 # save as json file
                 file_name = 'iherb_supp_crawling.json'
                 with open(file_name, 'w', encoding='UTF-8') as f:
                     json.dump(data, f, ensure_ascii=False)
                     print("json file has been saved!")
-        
+
         time.sleep(2)
-        
-       
+
+
 ```
 
-:bulb: Web-crawling process is often stopped unexpectedly, so we'd better save crawled data regularly and include loading saved file (crawled) to skip already collected data. In **crawl_n_pages**, I set **from_page** and **to_page** arguments, letting the function to crawl from the second page to 4th page (below code). This is helpful as we tend to run the crawling process **simultaneously using multiple kernels**. 
+:bulb: Web-crawling process is often stopped unexpectedly, so we'd better save crawled data regularly and include loading saved file (crawled) to skip already collected data. In **crawl_n_pages**, I set **from_page** and **to_page** arguments, letting the function to crawl from the second page to 4th page (below code). This is helpful as we tend to run the crawling process **simultaneously using multiple kernels**.
 
 Remember that crawling process is quite time consuming, with tons of exceptions :cry:
 
 ```python
 crawl_n_pages(from_page=2, to_page=4)
 ```
-

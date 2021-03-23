@@ -1,5 +1,6 @@
 ---
 title: "[DL 101] Learning Rate Scheduler"
+excerpt: "What is learning rate scheduler?"
 date: 2021-02-25 16:000 -0400
 author : 오승미
 use_math: true
@@ -19,7 +20,7 @@ We can adjust the learning rate depending on *some conditions* which helps to im
 
 $ lr_{epoch} = lr_0*\lambda $
 
-where lr_lambda is a **function** or list(of functions to each group of parameters) and it is multiplied by the initial learning rate. 
+where lr_lambda is a **function** or list(of functions to each group of parameters) and it is multiplied by the initial learning rate.
 
 Pytorch:
 
@@ -33,7 +34,7 @@ scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=[lambda1, lam
 
 ## 2. Step LR
 
-$$ lr_{epoch} = 
+$$ lr_{epoch} =
 \begin{cases}
   \gamma*lr_{epoch-1} & \text{if epoch * step_size = 0} \\
   lr_{epoch-1} & \text{otherwise}
@@ -58,13 +59,13 @@ optimizer.step()
 scheduler.step()
 ```
 
-​	
+​
 
 ## 3. Exponential LR
 
 $ lr_{epoch} = \gamma * lr_{epoch-1} $
 
-Decays the learning rate by gamma every epoch.	
+Decays the learning rate by gamma every epoch.
 
 Pytorch:
 

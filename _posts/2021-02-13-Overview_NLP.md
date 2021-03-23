@@ -1,5 +1,6 @@
 ---
 title: "[NLP] Overview of NLP"
+excerpt: "There are countless ways to perform NLP, and the flow of methodologies is changing very quickly. Therefore, it is important to understand the latest trends in NLP. Since it is difficult to handle each method in a single posting, this posting will cover only the overview of NLP, and then individual models will be covered in the subsequent postings in more detail."
 date: 2021-02-13 09:000 -0400
 author : 조경민
 categories :
@@ -19,7 +20,7 @@ In this posting, we'll look at the overall flow of NLP. There are countless ways
 
 - **Classification by Word representation**:
 
-  
+
 
 ![](https://blog.kakaocdn.net/dn/cbdEOR/btqCoSeoMqR/Gz15kGaPfBEPZSOQA9jOl0/img.png)
 
@@ -38,8 +39,8 @@ As you can see from the picture above, we can classify the methods based on word
 - **Bag of Words (BoW)**: Bag of Words is a numerical representation of text data that focuses only on the frequency of words appearing without considering the order of words at all. Let's think of the process of making BoW as these two processes.
 
   > (1) First, give each word a unique integer index.
-  
-  > (2) Create a vector at the location of each index that records the number of appearances. 
+
+  > (2) Create a vector at the location of each index that records the number of appearances.
 
   You can use the function CountVectorizer in sklearn package to implement in python.
 
@@ -63,7 +64,7 @@ So far, we've looked at various methods used in NLP. From now on, we will review
 
 > **(1) CBOW**: CBOW is a way of predicting the words in the middle, with the words around it. Let's take an example.
 >
-> Assume that we have a sentence _"The fat cat sat on the mat"_ for analysis. Predicting the word "sat" from {"The", "fat", "cat", "on", "the", "mat"} is what CBOW does. The word "sat" that should be predicted is called the _center word_, and the words used in the prediction are called the _context word_. To perform CBOW, we have to decide how many words to see in front of and behind the central word, which is called _'window'_. If the window size is 2 and the central word you want to predict is "sat", refer to the first two words, "fat" & "cat", and the latter two words, "on" & "the". If you have decided the window size, you can continue to move the window to create data sets for learning by changing the surrounding and center word choices, which is called _'sliding windows'_. Be aware that all inputs should be one-hot vectors. 
+> Assume that we have a sentence _"The fat cat sat on the mat"_ for analysis. Predicting the word "sat" from {"The", "fat", "cat", "on", "the", "mat"} is what CBOW does. The word "sat" that should be predicted is called the _center word_, and the words used in the prediction are called the _context word_. To perform CBOW, we have to decide how many words to see in front of and behind the central word, which is called _'window'_. If the window size is 2 and the central word you want to predict is "sat", refer to the first two words, "fat" & "cat", and the latter two words, "on" & "the". If you have decided the window size, you can continue to move the window to create data sets for learning by changing the surrounding and center word choices, which is called _'sliding windows'_. Be aware that all inputs should be one-hot vectors.
 >
 > **(2) Skip-gram**: If CBOW, which was mentioned previously, predicted the central word through the peripheral word, Skip-gram predicts the peripheral word from the central word. Using the same sentence above, Skip-gram wants to predict "fat", "cat", "on" and "mat" through "sat", assuming that the central word is "sat" and the window is 2. Because the logic is similar to CBOW, I guess you can easily understand it through the picture below.
 >
@@ -77,7 +78,7 @@ So far, we've looked at various methods used in NLP. From now on, we will review
 
   To sum up GloVe's idea in a single line, it is to make the inner product of the embedded central word and surrounding word vectors to be the probability of Co-occurence in the entire corpus. Details about GloVe like its loss function will be dealt in separate posting later.
 
-- **Seq2Seq**: Seq2Seq is a model used in various fields that outputs sequences from different domains from the entered sequences. You can configure the input sequence and the output sequence as a question and answer to make it a chatbot, or you can make the input sequence and output sequence into input and translation sentences, respectively, into a translator. This is basically a model using RNN, consists of two large architectures: an _'encoder'_ and a _'decoder'_. 
+- **Seq2Seq**: Seq2Seq is a model used in various fields that outputs sequences from different domains from the entered sequences. You can configure the input sequence and the output sequence as a question and answer to make it a chatbot, or you can make the input sequence and output sequence into input and translation sentences, respectively, into a translator. This is basically a model using RNN, consists of two large architectures: an _'encoder'_ and a _'decoder'_.
 
   The _encoder_ receives all the words in the input sentence sequentially and then compresses all of these word information into a vector at the end, which is called the _'context vector'_. The encoder sends the context vector to the decoder when all the information in the input sentence is compressed into one context vector. The _decoder_ receives the context vector and outputs the translated words one by one sequentially. There is not enough space to write all the relevant information, so in this posting, I will simply present a picture that shows the overall mechanism and discuss it in more detail in the next posting.
 
@@ -85,7 +86,7 @@ So far, we've looked at various methods used in NLP. From now on, we will review
 
   _(** Image from: https://wikidocs.net/images/page/24996/%EB%8B%A8%EC%96%B4%ED%86%A0%ED%81%B0%EB%93%A4%EC%9D%B4.PNG)_
 
-- **ELMo (Embeddings from Language Model)**: It is a new word embedding methodology proposed in 2018. The biggest feature of ELMo is its use of pre-trained language models. This is why ELMo's name contains LM. The embedding vectors expressed in Word2Vec or GloVe have the disadvantage of not properly reflecting whether the word "character" represents a text or personality. To compensate for these shortcomings, _'Contextualized Word Embeddeding'_ was created. This can be implemented through the _'Bidirectional Language Model (biLM)'_, which utilizes both language models in both directions. The biLM in ELMo basically assumes a multi-layer structure, which means that there are at least two hidden layers. The figure below shows the forward and backward language models, respectively. The interior of the encoder architecture and decoder architecture is actually two RNN architectures. RNN cells that receive input sentences are called encoders, and RNN cells that output output sentences are called decoders. 
+- **ELMo (Embeddings from Language Model)**: It is a new word embedding methodology proposed in 2018. The biggest feature of ELMo is its use of pre-trained language models. This is why ELMo's name contains LM. The embedding vectors expressed in Word2Vec or GloVe have the disadvantage of not properly reflecting whether the word "character" represents a text or personality. To compensate for these shortcomings, _'Contextualized Word Embeddeding'_ was created. This can be implemented through the _'Bidirectional Language Model (biLM)'_, which utilizes both language models in both directions. The biLM in ELMo basically assumes a multi-layer structure, which means that there are at least two hidden layers. The figure below shows the forward and backward language models, respectively. The interior of the encoder architecture and decoder architecture is actually two RNN architectures. RNN cells that receive input sentences are called encoders, and RNN cells that output output sentences are called decoders.
 
   ![](https://wikidocs.net/images/page/33930/forwardbackwordlm2.PNG)
 
@@ -115,7 +116,7 @@ So far, we've looked at various methods used in NLP. From now on, we will review
 
   The flow of the embedding model can be divided into two main categories: _AutoRegressive (AR)_ model and the _AutoEncoding (AE)_ model. AR models have the limitation of not being able to see the context in both directions, and in the case of ELMo, they use both forward and reverse LSTM layers, but they are hard to see as true bidirectional models because they learn each independently. The AE model, which includes BERT, etc., is a two-way model, but there is a dependency problem between masking tokens in that the masked tokens are assumed to be independent of each other.
 
-  Yang et al. (2019) proposed a _'Permutation language model'_ to overcome these limitations. It proceeds the model learning with randomly shuffled tokens, treating them as if they were the original order. The Permutation language model is an AR model that learns sequences sequentially, but both the two-way context of the sentence can be considered in that it is learned after performing the Permutation. Yang et al. argued that this model has bi-directionality but can overcome the disadvantages of AE model because it is AR. Also, the mismatch between pretrain-fine tuning can be solved because the masking is not done during pretraining stage. In fact, the actual implementation of the Permutation language model is realized using an attention mask, not by mixing tokens. 
+  Yang et al. (2019) proposed a _'Permutation language model'_ to overcome these limitations. It proceeds the model learning with randomly shuffled tokens, treating them as if they were the original order. The Permutation language model is an AR model that learns sequences sequentially, but both the two-way context of the sentence can be considered in that it is learned after performing the Permutation. Yang et al. argued that this model has bi-directionality but can overcome the disadvantages of AE model because it is AR. Also, the mismatch between pretrain-fine tuning can be solved because the masking is not done during pretraining stage. In fact, the actual implementation of the Permutation language model is realized using an attention mask, not by mixing tokens.
 
   Actually, XLNet has a lot of concepts that are required to understand the model from Attention mechanism to Transformer-XL and Attention mask. So if you'd like to learn more about this model, you can go to https://ratsgo.github.io/natural%20language%20processing/2019/09/11/xlnet/ and get a lot of help.
 
@@ -127,7 +128,7 @@ So far, we've looked at various methods used in NLP. From now on, we will review
 
   _(** Image from: https://jeonsworld.github.io/static/8a926494b114425a6772016a49a6277f/fcda8/fig2.png)_
 
-  
+
 
 In addition to the models mentioned above, there are many other useful methods for NLP, such as ALBERT and GPT. Since we talked about the approximate flow of NLP models, I will introduce the details of each model from next time.
 
@@ -156,4 +157,3 @@ In addition to the models mentioned above, there are many other useful methods f
 - https://settlelib.tistory.com/59
 - https://brunch.co.kr/@synabreu/55
 - https://jeonsworld.github.io/NLP/electra/
-

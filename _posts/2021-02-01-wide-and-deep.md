@@ -1,5 +1,6 @@
 ---
 title: "[Paper Review] Wide & Deep Learning for Recommender Systems (2016)"
+excerpt: "Today, I will review a paper that first integrated the idea of latent variables with deep learning."
 date: 2021-01-31 14:000 -0400
 author : 정여진
 categories :

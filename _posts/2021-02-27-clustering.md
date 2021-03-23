@@ -1,11 +1,12 @@
 ---
 title: "[NLP] Code - BERT + KMeans"
+excerpt: "Text Clustering - BERT + Dimension reduction + KMeans"
 date: 2021-02-27 16:000 -0400
 author : 조경민
 categories :
   - transformer
   - NLP
-tags : 
+tags :
   - BERT
   - NLP
   - KMeans
@@ -100,7 +101,7 @@ class Embed_multi:
         with torch.no_grad():
             outputs = model(tokens_tensor, segments_tensors)
         hidden_states = outputs[2]
-    
+
     if self.unit == 'word':
         ## Stack all hidden states (outputs from 13 layers)
         token_embeddings = torch.stack(hidden_states, dim=0)

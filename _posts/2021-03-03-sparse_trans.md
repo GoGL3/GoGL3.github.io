@@ -1,5 +1,6 @@
 ---
 title: "[Paper Review] Sparse Transformer"
+excerpt: "I will focus on the core part of this paper (=Factorized self-attention) and briefly mention rest of the stuffs."
 date: 2021-03-03 12:000 -0400
 author : 조경민
 categories :
@@ -28,7 +29,7 @@ The paper team first studied in what pattern Transformer's attention technique i
 
 
 
-In the process of 128 layers of traditional transformer learning CIFAR-10 datasets, the pixels are brightly represented to determine where the most attention-seeking pixels are when generating the next pixel. First, if you look at (a), early layers of the network first explore locally connected patrons. (b) shows that layers 19-20 split attention into row & column attention. (c) indicates that some attention layers show global & data-dependent access patterns. Finally, (d) indicates that the latter 64th to 128th layers are only focused on the speci£c input patters, showing high sparsity. 
+In the process of 128 layers of traditional transformer learning CIFAR-10 datasets, the pixels are brightly represented to determine where the most attention-seeking pixels are when generating the next pixel. First, if you look at (a), early layers of the network first explore locally connected patrons. (b) shows that layers 19-20 split attention into row & column attention. (c) indicates that some attention layers show global & data-dependent access patterns. Finally, (d) indicates that the latter 64th to 128th layers are only focused on the speci£c input patters, showing high sparsity.
 
 The paper team noted that such a traditional Transformer exhibits a certain pattern in learning something, i.e., it gives attention to only a small amount of sparse data in the end. So they came up with the idea - _why don't we just learn sparsely from the beginning?_
 
@@ -42,7 +43,7 @@ The paper team noted that such a traditional Transformer exhibits a certain patt
 
 
 
-The **Full Self-attention** covered in the last posting calculates the attention for all previous values, as shown in (a). However, in **Factorized Self-attention**, the method gives attention to only a fraction of the previous value, not all, and it just varies slightly depending on whether it is _Strided_ or _Fixed_. 
+The **Full Self-attention** covered in the last posting calculates the attention for all previous values, as shown in (a). However, in **Factorized Self-attention**, the method gives attention to only a fraction of the previous value, not all, and it just varies slightly depending on whether it is _Strided_ or _Fixed_.
 
 **Strided attention** (Figure (b)) is to have one head attend to the previous _l_ locations and the other head attend to every _l_ th location, where _l_ is the _stride_ and chosen to be close to _sqrt(n)_. The formula is as follows :
 
