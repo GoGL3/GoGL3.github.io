@@ -68,3 +68,8 @@ layout: default
 <div id="disqus_thread"></div>
 {% include disqus.html %}
 {% endif %}
+
+ ## if there is an author bio
+ {% if author.bio %}
+     {% include author_bio.html %}
+ {% endif %}
