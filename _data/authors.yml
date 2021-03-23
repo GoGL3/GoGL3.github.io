@@ -4,6 +4,8 @@
   name        : "Seungmi"
   bio         : ""
   avatar      : "profile1.jpeg"
+  email       : "seungmi530@gmail.com"
+  github      : "Seungmi122"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -16,6 +18,8 @@
   name        : "Kyungmin"
   bio         : ""
   avatar      : "profile2.jpeg"
+  email       : ""
+  github      : "ckm4514"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -28,6 +32,8 @@
   name        : "Yeojin"
   bio         : "ENFJ/Otaku"
   avatar      : "profile3.jpg"
+  email       : "jjung1089@gmail.com"
+  github      : "kelseyj3411"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
