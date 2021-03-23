@@ -34,14 +34,14 @@ kramdown:
 ####################################
 #
 owner:
-  name: 고글고글
+  name: Team GoGL 
   avatar: logo.png
-  job: "연세대 통계데이터사이언스학과 석사과정"
-  bio: "오승미 조경민 정여진입니당"
+  job: "M.S. in Statistics & Data Science, Yonsei"
+  bio: "Trying to blend in with the A.I. madness"
   email: 
   disqus-shortname: 
   twitter: #username
-  facebook: #KangBK0120
+  facebook: 
   google:
     plus: #username
     analytics:
@@ -49,7 +49,7 @@ owner:
     ad-client:
     ad-slot:
   bing-verify:
-  github: #KangBK0120
+  github: GoGL3
   gitlab: #username
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
   linkedin: #username
